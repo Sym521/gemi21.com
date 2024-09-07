@@ -4,8 +4,8 @@ import Link from "next/link";
 export const Header = () => {
     return (
         <>
-            <div className="flex justify-between mt-0.5 ml-2 bg-mustard">
-                <div className="text-3xl md:text-7xl text-left text-sonavy">
+            <div className="flex justify-between mt-0.5 ml-2">
+                <div className="text-3xl md:text-7xl text-left">
                     <a href="/">Sym</a>
                     <div className="flex space-x-5">
                         <a href="https://github.com/Sym521">

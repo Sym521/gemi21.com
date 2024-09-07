@@ -7,7 +7,7 @@ import { Achievements } from "./_components/Achievements";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-screen bg-mustard">
+    <div className="flex flex-col w-full h-screen bg-sonavy text-snow-50">
       <Header />
       <main>
         <About />

@@ -19,7 +19,6 @@ export const Experience = () => {
                         <li>Next.js</li>
                         <li>Python</li>
                         <li>FastAPI</li>
-                        <li>Prisma</li>
                     </ul>
                 </div>
             </div>

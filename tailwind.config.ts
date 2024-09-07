@@ -14,8 +14,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        'mustard': '#DDE7A5',
-        'sonavy': '#22185A',
+        'snow': {
+          '50': '#f5f6f5',
+          '100': '#eef0ee',
+          '200': '#daddda',
+          '300': '#bac0b9',
+          '400': '#949d93',
+        },
+        'sonavy': '#2e3754',
       },
     },
   },

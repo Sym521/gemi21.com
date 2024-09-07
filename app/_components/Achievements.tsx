@@ -8,7 +8,6 @@ export const Achievements = () => {
                 <h2>DCON 2025 (AI and business contest for National Institute of Technology students)</h2>
                 <p>3rd place</p>
             </div>
-
         </div>
     );
 }
