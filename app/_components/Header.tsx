@@ -17,7 +17,7 @@ export const Header = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-col justify-end items-end text-3xl md:text-5xl space-y-1 mr-2 text-right text-sonavy list-none">
+                <div className="flex flex-col justify-end items-end text-3xl md:text-5xl space-y-1 mr-2 text-right list-none">
                     <Link href={"/"} className="hover:underline">About</Link>
                     <Link href={"/"} className="hover:underline">Projects</Link>
                     <Link href={"/"} className="hover:underline">Contact</Link>

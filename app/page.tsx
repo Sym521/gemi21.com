@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full h-screen bg-sonavy text-snow-50">
       <Header />
-      <main>
+      <main className="mt-2">
         <About />
         <Experience />
         <Achievements />

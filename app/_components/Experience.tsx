@@ -4,7 +4,7 @@ export const Experience = () => {
     return (
         <div className="mt-8 ml-4 flex-col">
             <h1 className="text-4xl">Experience</h1>
-            <div className="text-2xl mt-4 ml-4 space-y-1">
+            <div className="text-xl mt-4 ml-4 space-y-1">
                 <h2>Software Engineer (Intern)</h2>
                 <div className="flex gap-4">
                     <a href="https://akariinc.co.jp" className="hover:underline">@AKARI Inc.</a>
