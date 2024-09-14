@@ -6,24 +6,24 @@ export const About = () => {
     return (
         <div className="ml-8 space-y-4 flex-col">
             <div>
-                <h1 className="text-6xl mb-2">Hi there👋</h1>
-                <span>
+                <h1 className="text-6xl">Hi there👋</h1>
+                <div className="mt-2 ml-2">
                     <p>My name is Sym!</p>
                     <p>I am currently an associate student at National Institute of Technology, Oita College.</p>
                     <p>My major is information engenieering.</p>
                     <p>I am curious about web designing, artificial intelligence, and quantum computing.</p>
-                </span>
+                </div>
             </div>
             <div>
                 <h1 className="text-4xl">Achievements</h1>
-                <div className="mt-2 space-y-1">
+                <div className="mt-2 ml-2 space-y-1">
                     <h2 className="text-xl">DCON 2024</h2>
                     <p>3rd place</p>
                 </div>
             </div>
             <div>
                 <h1 className="text-4xl">Experience</h1>
-                <div className="text-xl mt-2 space-y-1">
+                <div className="mt-2 ml-2 space-y-1">
                     <h2>Software Engineer (Intern)</h2>
                     <div className="flex gap-4">
                         <a href="https://akariinc.co.jp" className="hover:underline">@AKARI Inc.</a>
@@ -40,9 +40,9 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-            <div className="my-8 ml-4 flex-col">
+            <div>
                 <h1 className="text-4xl">Projects</h1>
-                <p className="text-xl mt-2 ml-2">
+                <p className="mt-2">
                     Coming soon
                 </p>
             </div>

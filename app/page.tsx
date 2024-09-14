@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full h-[100vh] bg-sonavy text-snow-50">
       <Header />
-      <main className="mt-4 ml-4 grid grid-cols-4 text-snow-200">
+      <main className="mt-8 ml-4 grid grid-cols-4 text-snow-200">
         <Image
           src="/topPageBg.jpg"
           alt='toppage'

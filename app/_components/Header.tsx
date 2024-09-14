@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <>
             <div className="flex justify-between mt-4">
-                <div className="text-3xl md:text-6xl text-left ml-4">
+                <div className="text-3xl md:text-5xl text-left ml-4">
                     <a href="/">Sym's Portfolio</a>
                     <div className="flex space-x-5">
                         <a href="https://github.com/Sym521">
