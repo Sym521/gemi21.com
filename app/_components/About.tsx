@@ -2,12 +2,11 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { FaHtml5, FaCss3, FaReact, FaPython } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiFastapi, SiTailwindcss } from "react-icons/si";
 
-
 export const About = () => {
     return (
-        <div className="md:ml-6 space-y-4 flex-col">
+        <div className="mr-4 md:ml-6 space-y-4 flex-col font-light">
             <div>
-                <h1 className="text-6xl">Hi there👋</h1>
+                <h1 className="text-7xl font-Oswald">Hi there👋</h1>
                 <div className="mt-2 ml-2">
                     <p>My name is Sym!</p>
                     <p>I am currently an associate student at National Institute of Technology, Oita College.</p>
@@ -16,14 +15,14 @@ export const About = () => {
                 </div>
             </div>
             <div>
-                <h1 className="text-4xl">Achievements</h1>
+                <h1 className="text-4xl font-Oswald">Achievements</h1>
                 <div className="mt-2 ml-2">
                     <a href="https://dcon.ai/" className="flex text-lg items-center hover:text-teal-200 hover:underline">DCON 2024 <ExternalLinkIcon /></a>
                     <p>3rd place</p>
                 </div>
             </div>
             <div>
-                <h1 className="text-4xl">Experience</h1>
+                <h1 className="text-4xl font-Oswald">Experience</h1>
                 <div className="mt-2 ml-2 space-y-1">
                     <div className="flex gap-1">
                         <h2>Software Engineer (Intern)</h2>
@@ -43,7 +42,7 @@ export const About = () => {
                 </div>
             </div>
             <div>
-                <h1 className="text-4xl">Projects</h1>
+                <h1 className="text-4xl font-Oswald">Projects</h1>
                 <p className="mt-2 ml-2">
                     Coming soon
                 </p>
