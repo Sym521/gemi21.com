@@ -16,10 +16,9 @@ export const Header = () => {
                         </a>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 text-xl md:text-4xl mr-6 text-right list-none">
+                <div className="grid md:grid-cols-2 md:gap-4 text-xl md:text-4xl mr-6 text-right list-none">
                     <Link href={"/"} className="hover:underline">About</Link>
-                    <Link href={"/"} className="hover:underline">Projects</Link>
-                    <Link href={"/"} className="hover:underline">Contact</Link>
+                    <Link href={"/Contact"} className="hover:underline">Contact</Link>
                 </div>
             </div>
         </>
