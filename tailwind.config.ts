@@ -18,14 +18,14 @@ const config: Config = {
         Oswald: ["var(--font-Oswald)"],
       },
       colors: {
-        'snow': {
-          '50': '#f5f6f5',
-          '100': '#eef0ee',
-          '200': '#daddda',
-          '300': '#bac0b9',
-          '400': '#949d93',
+        snow: {
+          "50": "#f5f6f5",
+          "100": "#eef0ee",
+          "200": "#daddda",
+          "300": "#bac0b9",
+          "400": "#949d93",
         },
-        'sonavy': '#2e3754',
+        sonavy: "#2e3754",
       },
     },
   },

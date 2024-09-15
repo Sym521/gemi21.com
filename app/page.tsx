@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import topPageBg from '../public/topPageBg.jpg'
+import Image from "next/image";
+import topPageBg from "../public/topPageBg.jpg";
 import { Header } from "./_components/Header";
 import { About } from "./_components/About";
 
@@ -10,15 +10,15 @@ export default function Home() {
       <main className="mt-8 ml-4 md:grid md:grid-cols-4 text-snow-200">
         <Image
           src={topPageBg}
-          alt='toppage'
-          sizes='100vw'
+          alt="toppage"
+          sizes="100vw"
           style={{
-            width: '100%',
-            height: 'auto',
+            width: "100%",
+            height: "auto",
           }}
-          className='hidden md:block'
+          className="hidden md:block"
         />
-        <div className='md:col-span-3'>
+        <div className="md:col-span-3">
           <About />
         </div>
       </main>
