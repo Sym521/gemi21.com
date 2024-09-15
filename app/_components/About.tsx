@@ -1,10 +1,11 @@
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { FaHtml5, FaCss3, FaReact, FaPython } from "react-icons/fa";
 import { SiTypescript, SiNextdotjs, SiFastapi, SiTailwindcss } from "react-icons/si";
 
 
 export const About = () => {
     return (
-        <div className="ml-8 space-y-4 flex-col">
+        <div className="md:ml-6 space-y-4 flex-col">
             <div>
                 <h1 className="text-6xl">Hi there👋</h1>
                 <div className="mt-2 ml-2">
@@ -16,19 +17,19 @@ export const About = () => {
             </div>
             <div>
                 <h1 className="text-4xl">Achievements</h1>
-                <div className="mt-2 ml-2 space-y-1">
-                    <a href="https://dcon.ai/" className="text-lg hover:text-teal-200 hover:underline">DCON 2024</a>
+                <div className="mt-2 ml-2">
+                    <a href="https://dcon.ai/" className="flex text-lg items-center hover:text-teal-200 hover:underline">DCON 2024 <ExternalLinkIcon /></a>
                     <p>3rd place</p>
                 </div>
             </div>
             <div>
                 <h1 className="text-4xl">Experience</h1>
-                <div className="mt-2 ml-2 space-y-1 ">
-                    <h2>Software Engineer (Intern)</h2>
-                    <div className="flex gap-4">
-                        <a href="https://akariinc.co.jp" className=" hover:text-red-300 hover:underline">@AKARI Inc.</a>
-                        <p>2024.08 - 2024.09</p>
+                <div className="mt-2 ml-2 space-y-1">
+                    <div className="flex gap-1">
+                        <h2>Software Engineer (Intern)</h2>
+                        <a href="https://akariinc.co.jp" className="flex items-center hover:text-red-300 hover:underline">@AKARI Inc. <ExternalLinkIcon /></a>
                     </div>
+                    <p>2024.08 - 2024.09</p>
                     <div className="flex space-x-2">
                         <FaHtml5 size={30} />
                         <FaCss3 size={30} />
