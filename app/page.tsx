@@ -5,7 +5,7 @@ import { About } from "./_components/About";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-[100vh] bg-sonavy text-snow-50">
+    <div className="flex flex-col w-full h-[100dvh] bg-sonavy text-snow-50">
       <Header />
       <main className="mt-8 ml-4 md:grid md:grid-cols-4 text-snow-200">
         <Image

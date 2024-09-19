@@ -6,13 +6,21 @@ export const Header = () => {
     <>
       <div className="flex justify-between mt-4 font-Oswald">
         <div className="text-3xl md:text-5xl text-left ml-4">
-          <a href="/">Sym&apos;s Portfolio</a>
+          <Link href={"/"}>Sym&apos;s Portfolio</Link>
           <div className="flex space-x-5">
             <a href="https://github.com/Sym521">
-              <GitHubLogoIcon width={35} height={60} />
+              <GitHubLogoIcon
+                width={35}
+                height={60}
+                className="transition ease-in-out delay-50 hover:text-blue-50 hover:scale-110 "
+              />
             </a>
             <a href="https://x.com/esulikesbread">
-              <TwitterLogoIcon width={35} height={60} />
+              <TwitterLogoIcon
+                width={35}
+                height={60}
+                className="transition ease-in-out delay-50 hover:text-sky-400 hover:scale-110 "
+              />
             </a>
           </div>
         </div>
