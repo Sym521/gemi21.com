@@ -2,6 +2,7 @@ import Image from "next/image";
 import topPageBg from "../public/topPageBg.jpg";
 import { Header } from "./_components/Header";
 import { About } from "./_components/About";
+import { Footer } from "./_components/Footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <About />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

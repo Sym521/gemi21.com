@@ -3,6 +3,7 @@ import { EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import mailPost from "../../public/mailPost.jpg";
 import { Header } from "../_components/Header";
 import { Clock } from "../_components/Clock";
+import { Footer } from "../_components/Footer";
 
 export default function Contact() {
   return (
@@ -31,9 +32,10 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <div className="fixed bottom-2 left-2 text-4xl md:text-9xl">
+      <div className="mt-8 ml-2 text-6xl md:text-9xl">
         <Clock />
       </div>
+      <Footer />
     </div>
   );
 }
