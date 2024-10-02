@@ -30,7 +30,7 @@ export const About = () => {
         <div className="mt-2 ml-2">
           <a
             href="https://dcon.ai/"
-            className="flex text-lg items-center hover:text-teal-200 hover:underline"
+            className="flex w-fit text-lg items-center hover:text-teal-200 hover:underline"
           >
             DCON 2024 <ExternalLinkIcon />
           </a>
@@ -44,7 +44,7 @@ export const About = () => {
             <h2>Software Engineer (Intern)</h2>
             <a
               href="https://akariinc.co.jp"
-              className="flex items-center hover:text-red-300 hover:underline"
+              className="flex w-fit items-center hover:text-red-300 hover:underline"
             >
               @AKARI Inc. <ExternalLinkIcon />
             </a>

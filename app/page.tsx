@@ -6,7 +6,7 @@ import { Footer } from "./_components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-[100dvh] bg-sonavy text-snow-50">
+    <div className="flex flex-col w-full h-fit bg-sonavy text-snow-50">
       <Header />
       <main className="mt-8 ml-4 md:grid md:grid-cols-4 text-snow-200">
         <Image
