@@ -1,6 +1,4 @@
-import Image from "next/image";
 import { EnvelopeClosedIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-import mailPost from "../../public/mailPost.jpg";
 import { Header } from "../_components/Header";
 import { Clock } from "../_components/Clock";
 import { Footer } from "../_components/Footer";
