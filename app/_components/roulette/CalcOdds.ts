@@ -1,5 +1,3 @@
-// CalcOdds.ts
-
 export interface WinningBet {
   bet: string;
   multiplier: number;

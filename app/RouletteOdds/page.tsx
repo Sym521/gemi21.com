@@ -1,4 +1,3 @@
-// page.tsx
 "use client";
 
 import { Input } from "@/app/_components/ui/input";
@@ -68,7 +67,7 @@ export default function RouletteOdds() {
               </li>
             ))
           ) : (
-            <li>
+            <li className="flex items-center justify-center">
               上のフォームに0〜36、または「00」の数字を入力して「計算」を押してください
             </li>
           )}
