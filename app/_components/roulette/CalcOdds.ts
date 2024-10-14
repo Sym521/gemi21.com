@@ -5,19 +5,19 @@ export interface WinningBet {
 
 export const CalcOdds = (inputNumber: string): WinningBet[] => {
   const winList: { [key: string]: { win: boolean; multiplier: number } } = {
-    low: { win: false, multiplier: 1 },
-    high: { win: false, multiplier: 1 },
-    even: { win: false, multiplier: 1 },
-    odd: { win: false, multiplier: 1 },
-    red: { win: false, multiplier: 1 },
-    black: { win: false, multiplier: 1 },
-    firstDozen: { win: false, multiplier: 2 },
-    secondDozen: { win: false, multiplier: 2 },
-    thirdDozen: { win: false, multiplier: 2 },
-    firstColumn: { win: false, multiplier: 2 },
-    secondColumn: { win: false, multiplier: 2 },
-    thirdColumn: { win: false, multiplier: 2 },
-    straightUp: { win: false, multiplier: 35 }, // 追加
+    low: { win: false, multiplier: 2 },
+    high: { win: false, multiplier: 2 },
+    even: { win: false, multiplier: 2 },
+    odd: { win: false, multiplier: 2 },
+    red: { win: false, multiplier: 2 },
+    black: { win: false, multiplier: 2 },
+    firstDozen: { win: false, multiplier: 3 },
+    secondDozen: { win: false, multiplier: 3 },
+    thirdDozen: { win: false, multiplier: 3 },
+    firstColumn: { win: false, multiplier: 3 },
+    secondColumn: { win: false, multiplier: 3 },
+    thirdColumn: { win: false, multiplier: 3 },
+    straightUp: { win: false, multiplier: 24 },
   };
 
   switch (inputNumber) {

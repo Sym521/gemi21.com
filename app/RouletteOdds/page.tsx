@@ -4,6 +4,8 @@ import { Input } from "@/app/_components/ui/input";
 import { Button } from "../_components/ui/button";
 import { useState } from "react";
 import { CalcOdds, WinningBet } from "../_components/roulette/CalcOdds";
+import { Header } from "../_components/Header";
+import { Footer } from "../_components/Footer";
 
 export default function RouletteOdds() {
   const [inputNumber, setInputNumber] = useState<string>(""); // ユーザー入力用
@@ -30,17 +32,18 @@ export default function RouletteOdds() {
   };
 
   return (
-    <>
+    <div className="flex flex-col w-full h-fit md:h-dvh text-snow-100 bg-sonavy font-Noto_Sans_JP">
+      <Header />
       <h1 className="flex items-center justify-center text-xl">
         倍率計算ツール
       </h1>
-      <div className="flex justify-center items-center space-x-2">
+      <div className="flex justify-center items-center space-x-2 mt-2">
         <Input
           type="text"
           value={inputNumber}
           placeholder="番号を入力"
           onChange={(e) => setInputNumber(e.target.value)}
-          className="w-25"
+          className="w-25 text-slate-800"
         />
         <Button type="button" onClick={handleCalcOdds}>
           計算
@@ -48,31 +51,32 @@ export default function RouletteOdds() {
       </div>
 
       {errorMessage && (
-        <div className="text-red-500 text-sm mt-2">{errorMessage}</div>
+        <div className="flex items-center justify-center text-xl text-red-500 mt-2">{errorMessage}</div>
       )}
 
       <div>
-        <div className="flex items-center justify-center">
-          <h2 className="text-lg">入力した番号:</h2>
+        <div className="flex items-center justify-center mt-2 text-xl">
+          <h2 className="">入力した番号:</h2>
           <p>{saveNumber}</p>
         </div>
-        <h2 className="flex items-center justify-center text-lg">
+        <h2 className="flex mt-2 items-center justify-center text-xl">
           当選した賭けと倍率:
         </h2>
         <ul>
           {winningBets.length > 0 ? (
             winningBets.map((bet, index) => (
-              <li key={index} className="flex items-center justify-center">
+              <li key={index} className="flex items-center justify-center text-xl">
                 {bet.bet}: {bet.multiplier}倍
               </li>
             ))
           ) : (
             <li className="flex items-center justify-center">
-              上のフォームに0〜36、または「00」の数字を入力して「計算」を押してください
+              上のフォームに0〜36、または「00」の数字を入力して「計算」を押してください。
             </li>
           )}
         </ul>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

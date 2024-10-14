@@ -5,7 +5,7 @@ import { Footer } from "../_components/Footer";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col w-full h-[100dvh] bg-sonavy text-snow-50">
+    <div className="flex flex-col w-full h-dvh bg-sonavy text-snow-50">
       <Header />
       <h1 className="mt-8 ml-2 text-6xl md:text-8xl font-Oswald">
         Contact me!📮

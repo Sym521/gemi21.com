@@ -1,3 +1,4 @@
+import { Noto_Sans_JP } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -16,6 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         Oswald: ["var(--font-Oswald)"],
+        Noto_Sans_JP: ["var(--font-Noto_Sans_JP)"],
       },
       colors: {
         snow: {

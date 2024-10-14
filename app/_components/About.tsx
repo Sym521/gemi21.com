@@ -1,4 +1,5 @@
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
+import { Link } from "lucide-react";
 import { FaHtml5, FaCss3, FaReact, FaPython } from "react-icons/fa";
 import {
   SiTypescript,
@@ -65,7 +66,9 @@ export const About = () => {
         </div>
         <div>
           <h1 className="text-4xl font-Oswald">Projects</h1>
-          <p className="mt-2 ml-2">Coming soon</p>
+          <div className="mt-2 ml-2 space-y-1">
+            <a href="/RouletteOdds" className="inline-block items-center hover:text-red-400" >🚧 Roulette odds calculator (beta)</a>
+          </div>
         </div>
       </div>
     </div>
