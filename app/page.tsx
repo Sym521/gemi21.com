@@ -1,29 +1,19 @@
 import Image from "next/image";
 import topPageBg from "../public/topPageBg.jpg";
-import { Header } from "./_components/Header";
-import { About } from "./_components/About";
+//import { About } from "./_components/About";
 import { Footer } from "./_components/Footer";
+import { Header } from "./_components/Header";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full h-fit md:h-dvh  bg-sonavy text-snow-50">
-      <Header />
-      <main className="mt-8 ml-4 md:grid md:grid-cols-4 text-snow-200">
-        <Image
-          src={topPageBg}
-          alt="toppage"
-          sizes="100vw"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-          className="hidden md:block"
-        />
-        <div className="md:col-span-3">
-          <About />
-        </div>
-      </main>
-      <Footer />
+    <div className="w-full h-fit md:h-dvh text-snow-50">
+      <AuroraBackground>
+        <main className="mx-auto mb-16 max-w-5xl px-5 py-4 sm:px-8">
+          <Header />
+          <Footer />
+        </main>
+      </AuroraBackground>
     </div>
   );
 }

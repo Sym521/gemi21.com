@@ -1,5 +1,6 @@
-import { Noto_Sans_JP } from "next/font/google";
 import type { Config } from "tailwindcss";
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 const config: Config = {
   darkMode: ["class"],
@@ -10,10 +11,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
+      keyframes: {
+        aurora: {
+          from: { backgroundPosition: "50% 50%, 50% 50%" },
+          to: { backgroundPosition: "350% 50%, 350% 50%" },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
         Oswald: ["var(--font-Oswald)"],
@@ -27,7 +36,6 @@ const config: Config = {
           "300": "#bac0b9",
           "400": "#949d93",
         },
-        sonavy: "#2e3754",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -76,6 +84,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    tailwindcssAnimate,
+    function addVariablesForColors({ addBase, theme }: { addBase: Function; theme: Function }) {
+      const allColors = flattenColorPalette(theme("colors"));
+      const newVars = Object.fromEntries(
+        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+      );
+
+      addBase({ ":root": newVars });
+    },
+  ],
 };
+
 export default config;
