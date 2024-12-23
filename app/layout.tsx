@@ -12,7 +12,7 @@ const OswaldFont = Oswald({
 });
 
 export const metadata: Metadata = {
-	title: "gemi21",
+	title: "Gemi21",
 	description: "Personal website by Sym",
 };
 

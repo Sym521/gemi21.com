@@ -1,7 +1,6 @@
-import Image from "next/image";
-import topPageBg from "../public/topPageBg.jpg";
 //import { About } from "./_components/About";
 import { Footer } from "./_components/Footer";
+import { Greeting } from "./_components/Greeting";
 import { Header } from "./_components/Header";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
@@ -11,6 +10,7 @@ export default function Home() {
       <AuroraBackground>
         <main className="mx-auto mb-16 max-w-5xl px-5 py-4 sm:px-8">
           <Header />
+          <Greeting />
           <Footer />
         </main>
       </AuroraBackground>
