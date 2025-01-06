@@ -27,6 +27,7 @@ const config: Config = {
       fontFamily: {
         Oswald: ["var(--font-Oswald)"],
         Noto_Sans_JP: ["var(--font-Noto_Sans_JP)"],
+        Poppins:["var(--font-Poppins)"],
       },
       colors: {
         snow: {
