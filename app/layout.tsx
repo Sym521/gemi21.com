@@ -15,7 +15,7 @@ const poppins = Poppins({
 	weight: "600",
 	subsets: ["latin"],
 	variable: "--font-Poppins",
-})
+});
 
 export const metadata: Metadata = {
 	title: "Gemi21",
@@ -27,7 +27,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} ${oswald.variable} ${poppins.variable}`}>
+			<body
+				className={`${inter.className} ${oswald.variable} ${poppins.variable}`}
+			>
 				{children}
 			</body>
 		</html>
