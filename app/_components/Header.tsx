@@ -1,21 +1,42 @@
+import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export const Header = () => {
 	return (
-		<div className="flex items-center bg-snow-50 text-slate-500 px-4 rounded-xl">
-			<Link href="/" className="font-Noto_Sans_JP font-bold text-4xl mr-auto">
-				Gemi21.com
+		<div className="flex items-center backdrop-blur-sm bg-white/40 text-slate-500 px-4 py-2 rounded-xl">
+			<Link
+				href="/"
+				className="px-1.5 font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto bg-indigo-100 rounded-xl"
+			>
+				G
 			</Link>
-			<div className="flex space-x-6">
-				<Link href="/about" className="hover:underline">
+			<div className="flex space-x-8">
+				<Link href="/About" className="hover:text-slate-800">
 					About
 				</Link>
-				<Link href="/blog" className="hover:underline">
-					Blog
+				<Link href="/" className="hover:text-slate-900">
+					🚧Blog
 				</Link>
-				<Link href="/content" className="hover:underline">
-					Content
+				<Link href="/" className="hover:text-slate-900">
+					🚧Project
 				</Link>
+				<div className="hidden sm:inline-flex space-x-8">
+					<p>|</p>
+					<Link href="https://github.com/Sym521">
+						<GitHubLogoIcon
+							width={25}
+							height={25}
+							className="transition ease-in-out delay-50 hover:text-slate-700 hover:scale-110 "
+						/>
+					</Link>
+					<Link href="https://x.com/esulikesbread">
+						<TwitterLogoIcon
+							width={25}
+							height={25}
+							className="transition ease-in-out delay-50 hover:text-sky-400 hover:scale-110 "
+						/>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);
