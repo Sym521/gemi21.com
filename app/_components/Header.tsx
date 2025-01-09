@@ -6,19 +6,19 @@ export const Header = () => {
 		<div className="flex items-center backdrop-blur-sm bg-white/40 text-slate-500 px-4 py-2 rounded-xl">
 			<Link
 				href="/"
-				className="font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto"
+				className="px-1.5 font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto bg-indigo-100 rounded-xl"
 			>
-				Gemi21.com
+				G
 			</Link>
 			<div className="flex space-x-8">
-				<Link href="/about" className="hover:text-slate-800">
+				<Link href="/About" className="hover:text-slate-800">
 					About
 				</Link>
-				<Link href="/blog" className="hover:text-slate-900">
-					Blog
+				<Link href="/" className="hover:text-slate-900">
+					🚧Blog
 				</Link>
-				<Link href="/content" className="hover:text-slate-900">
-					Content
+				<Link href="/" className="hover:text-slate-900">
+					🚧Project
 				</Link>
 				<div className="hidden sm:inline-flex space-x-8">
 					<p>|</p>

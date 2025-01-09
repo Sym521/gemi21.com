@@ -31,7 +31,7 @@ import {
 	TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 
-export const AboutMe = () => {
+export const TopPageAboutMe = () => {
 	const bentoItems = [
 		{
 			Icon: FaLocationDot,
@@ -116,7 +116,7 @@ export const AboutMe = () => {
 	];
 	return (
 		<div>
-			<h1 className="mt-16 mb-4 text-3xl font-Poppins font-black flex justify-center items-center">
+			<h1 className="mt-14 mb-4 text-3xl font-Poppins font-black flex justify-center items-center">
 				About Me
 			</h1>
 			<div>

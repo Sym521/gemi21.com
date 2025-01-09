@@ -2,7 +2,7 @@ import { AuroraBackground } from "@/app/_components/ui/aurora-background";
 import { Footer } from "./_components/Footer";
 import { Greeting } from "./_components/Greeting";
 import { Header } from "./_components/Header";
-import { AboutMe } from "./_components/AboutMe";
+import { TopPageAboutMe } from "./_components/TopPageAboutMe";
 
 export default function Home() {
 	return (
@@ -11,7 +11,7 @@ export default function Home() {
 				<main className="mx-auto max-w-5xl px-5 py-4 sm:px-8">
 					<Header />
 					<Greeting />
-					<AboutMe />
+					<TopPageAboutMe />
 					<Footer />
 				</main>
 			</AuroraBackground>
