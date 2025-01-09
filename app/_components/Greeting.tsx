@@ -11,9 +11,9 @@ export const Greeting = () => {
 				<p>👋</p>
 			</div>
 			<div className="font-medium text-lg sm:text-xl md:text-3xl">
-				<p className="">My name is Sym! I'm a CS student in japan!</p>
+				<p className="">My name is Sym! I&apos;m a CS student in japan!</p>
 				<div className="mt-2 font-medium">
-					Currently I'm crazy about...
+					Currently I&apos;m crazy about...
 					<FlipWords
 						words={["Web design", "Playing game", "AI", "Future Core"]}
 						duration={1000}
