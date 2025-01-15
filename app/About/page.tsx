@@ -17,9 +17,9 @@ import {
 
 export default function About() {
 	return (
-		<div className="w-full h-fit text-snow-50">
-			<AuroraBackground>
-				<main className="mx-auto max-w-5xl px-5 py-4 sm:px-8">
+		<div className="w-full h-fit text-slate-800">
+			{/* <AuroraBackground> */}
+				<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
 					<Header />
 					<div className="mt-8">
 						<h1 className="text-3xl md:text-7xl inline-block font-bold text-left bg-gradient-to-r from-indigo-500 to-purple-300 bg-clip-text text-transparent">
@@ -42,7 +42,7 @@ export default function About() {
 							</p>
 						</span>
 					</div>
-					<div className="mt-8">
+					<div className="my-4">
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Skills
 						</h1>
@@ -79,7 +79,7 @@ export default function About() {
 								<SiLlvm style={{ width: 60, height: 60, color: "#1E293B" }} />
 							</Marquee>
 						</div>
-						<div className="mt-4">
+						<div className="my-4">
 							<p>
 								These are the languages and tools I like to use for my projects.
 							</p>
@@ -106,7 +106,7 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div className="mt-8">
+					<div className="my-4">
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Achievement
 						</h1>
@@ -118,7 +118,7 @@ export default function About() {
 							<p className="text-amber-700">🥉3rd place</p>
 						</div>
 					</div>
-					<div className="mt-8">
+					<div className="mt-4 mb-8">
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Experience
 						</h1>
@@ -140,10 +140,9 @@ export default function About() {
 							<SiFastapi style={{ width: 25, height: 25 }} />
 						</div>
 					</div>
-
 					<Footer />
 				</main>
-			</AuroraBackground>
+			{/* </AuroraBackground> */}
 		</div>
 	);
 }
