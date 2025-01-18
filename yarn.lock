@@ -351,6 +351,13 @@
   dependencies:
     "@radix-ui/react-slot" "1.1.1"
 
+"@radix-ui/react-separator@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-separator/-/react-separator-1.1.1.tgz#dd60621553c858238d876be9b0702287424866d2"
+  integrity sha512-RRiNRSrD8iUiXriq/Y5n4/3iE8HzqgLHsusUSg5jVpU2+3tqcUFPJXHDymwEypunc2sWxDUS3UC+rkZRlHedsw==
+  dependencies:
+    "@radix-ui/react-primitive" "2.0.1"
+
 "@radix-ui/react-slot@1.1.1", "@radix-ui/react-slot@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-slot/-/react-slot-1.1.1.tgz#ab9a0ffae4027db7dc2af503c223c978706affc3"
@@ -479,10 +486,10 @@
     "@react-spring/shared" "~9.7.5"
     "@react-spring/types" "~9.7.5"
 
-"@react-three/drei@^9.120.5":
-  version "9.120.5"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-9.120.5.tgz#ac49706b71b52040623b9ef519fd010f37be1e15"
-  integrity sha512-hSu3q+gq546Op4aihIkbdIsFfjrmOqcJyMPNGv/IqM0nycJtvv5IzL+MISLplFTNFI6xMBJ9ZwC+7dpq35/FOA==
+"@react-three/drei@^9.121.2":
+  version "9.121.2"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-9.121.2.tgz#bd81e9cd8441c2634556365e9df1bbc7bee99234"
+  integrity sha512-0oyd26wn8NAHrlqrr7oZJMq/x2wikJfMz59R/tGRaqLLI16rFP5M8sU/NFFgSiPuyV09b4NqMuo9oimToA9dgA==
   dependencies:
     "@babel/runtime" "^7.26.0"
     "@mediapipe/tasks-vision" "0.10.17"
@@ -501,11 +508,10 @@
     stats.js "^0.17.0"
     suspend-react "^0.1.3"
     three-mesh-bvh "^0.7.8"
-    three-stdlib "^2.34.0"
+    three-stdlib "^2.35.6"
     troika-three-text "^0.52.0"
     tunnel-rat "^0.1.2"
     utility-types "^3.11.0"
-    uuid "^9.0.1"
     zustand "^5.0.1"
 
 "@react-three/fiber@^8.17.10":
@@ -647,10 +653,15 @@
     fflate "~0.8.2"
     meshoptimizer "~0.18.1"
 
-"@types/webxr@*", "@types/webxr@^0.5.2":
+"@types/webxr@*":
   version "0.5.20"
   resolved "https://registry.yarnpkg.com/@types/webxr/-/webxr-0.5.20.tgz#b16b681af314ec011b2e8221b0a072d691c04953"
   integrity sha512-JGpU6qiIJQKUuVSKx1GtQnHJGxRjtfGIhzO2ilq43VZZS//f1h1Sgexbdk+Lq+7569a6EYhOWrUpIruR/1Enmg==
+
+"@types/webxr@^0.5.2":
+  version "0.5.21"
+  resolved "https://registry.yarnpkg.com/@types/webxr/-/webxr-0.5.21.tgz#2e25353af14c7569bcf082f2fb75921d2130db7e"
+  integrity sha512-geZIAtLzjGmgY2JUi6VxXdCrTb99A7yP49lxLr2Nm/uIK0PkkxcEi4OGhoGDO4pxCf3JwGz2GiJL2Ej4K2bKaA==
 
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0":
   version "7.2.0"
@@ -716,9 +727,9 @@
     "@use-gesture/core" "10.3.1"
 
 "@webgpu/types@*":
-  version "0.1.52"
-  resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.52.tgz#239995418d86de927269aca54cbadfbee04eb03a"
-  integrity sha512-eI883Nlag2hGIkhXxAnq8s4APpqXWuPL3Gbn2ghiU12UjLvfCbVqHK4XfXl3eLRTatqcMmeK7jws7IwWsGfbzw==
+  version "0.1.53"
+  resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.53.tgz#19a607eceefe90dadb49209a5fbd0fd60289fffa"
+  integrity sha512-x+BLw/opaz9LiVyrMsP75nO1Rg0QfrACUYIbVSfGwY/w0DiWIPYYrpte6us//KZXinxFAOJl0+C17L1Vi2vmDw==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -1185,9 +1196,9 @@ destyle.css@^4.0.1:
   integrity sha512-G9iyW0JfRkgdxhbWQeuLdO1KZ40nzKssHtArbSFvaU/w44G0cZ5v3u4bHY829INSu480J/fxae+lTm225mN3Vw==
 
 detect-gpu@^5.0.56:
-  version "5.0.63"
-  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-5.0.63.tgz#fef326095e2c39fed5622da4a8f9c4b8de8663ea"
-  integrity sha512-S4ZOf2tI5nwFyhzGvsaRA86IvctD6JQtq4+NPSseO6E1AWW66qTDFHdAMBPlFiD7Dfe9TETy0Q7pa/kHcIYYMQ==
+  version "5.0.64"
+  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-5.0.64.tgz#daf29edd42cdaf9c0e9d6656f0fd3b3be62218af"
+  integrity sha512-KDSw4O/PhZLZG+oSYkkn1kMru4Mz++O2IkaALlYpZHvw6zL/uE7tlcy1Q5/q5jGGdIIOxQlncuTl1+ew6ZE68w==
   dependencies:
     webgl-constants "^1.1.1"
 
@@ -1690,13 +1701,13 @@ foreground-child@^3.1.0:
     cross-spawn "^7.0.0"
     signal-exit "^4.0.1"
 
-framer-motion@^11.15.0:
-  version "11.16.0"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.16.0.tgz#6592689bc8d6422207a55e48297eae99e9aa2eb2"
-  integrity sha512-oL2AWqLQuw0+CNEUa0sz3mWC/n3i147CckvpQn8bLRs30b+HxTxlRi0YR2FpHHhAbWV7DKjNdHU42KHLfBWh/g==
+framer-motion@^11.18.1:
+  version "11.18.1"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.18.1.tgz#2d832ac22671c1cd90338cac4a572825328e3089"
+  integrity sha512-EQa8c9lWVOm4zlz14MsBJWr8woq87HsNmsBnQNvcS0hs8uzw6HtGAxZyIU7EGTVpHD1C1n01ufxRyarXcNzpPg==
   dependencies:
-    motion-dom "^11.16.0"
-    motion-utils "^11.16.0"
+    motion-dom "^11.18.1"
+    motion-utils "^11.18.1"
     tslib "^2.4.0"
 
 fs.realpath@^1.0.0:
@@ -1911,9 +1922,9 @@ hasown@^2.0.0, hasown@^2.0.2:
     function-bind "^1.1.2"
 
 hls.js@^1.5.17:
-  version "1.5.18"
-  resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.5.18.tgz#f0279072c31ba763efc08b6c7dff0f10f0703db0"
-  integrity sha512-znxR+2jecWluu/0KOBqUcvVyAB5tLff10vjMGrpAlz1eFY+ZhF1bY3r82V+Bk7WJdk03iTjtja9KFFz5BrqjSA==
+  version "1.5.19"
+  resolved "https://registry.yarnpkg.com/hls.js/-/hls.js-1.5.19.tgz#bc8471a7c712f1314b04b2be4639dd273819d3dc"
+  integrity sha512-C020dKWEJcyvLnrqsFKW4q6D/6IEzKWdhktIS5bgoyEFE8lHgrFBq4RIngdy113abJOlIruhv8qjg7UX8hwxOw==
 
 ieee754@^1.2.1:
   version "1.2.1"
@@ -2334,11 +2345,6 @@ lru-cache@^10.2.0:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-lucide-react@^0.451.0:
-  version "0.451.0"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.451.0.tgz#d5de418a23dabb57eabf19545c4419ac6059c9d1"
-  integrity sha512-OwQ3uljZLp2cerj8sboy5rnhtGTCl9UCJIhT1J85/yOuGVlEH+xaUPR7tvNdddPvmV5M5VLdr7cQuWE3hzA4jw==
-
 maath@^0.10.8:
   version "0.10.8"
   resolved "https://registry.yarnpkg.com/maath/-/maath-0.10.8.tgz#cf647544430141bf6982da6e878abb6c4b804e24"
@@ -2408,17 +2414,17 @@ moment@^2.30.1:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.30.1.tgz#f8c91c07b7a786e30c59926df530b4eac96974ae"
   integrity sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==
 
-motion-dom@^11.16.0:
-  version "11.16.0"
-  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-11.16.0.tgz#1766e4f9ada72c30ba8f3e698774372fcbcc95b3"
-  integrity sha512-4bmEwajSdrljzDAYpu6ceEdtI4J5PH25fmN8YSx7Qxk6OMrC10CXM0D5y+VO/pFZjhmCvm2bGf7Rus482kwhzA==
+motion-dom@^11.18.1:
+  version "11.18.1"
+  resolved "https://registry.yarnpkg.com/motion-dom/-/motion-dom-11.18.1.tgz#e7fed7b7dc6ae1223ef1cce29ee54bec826dc3f2"
+  integrity sha512-g76KvA001z+atjfxczdRtw/RXOM3OMSdd1f4DL77qCTF/+avrRJiawSG4yDibEQ215sr9kpinSlX2pCTJ9zbhw==
   dependencies:
-    motion-utils "^11.16.0"
+    motion-utils "^11.18.1"
 
-motion-utils@^11.16.0:
-  version "11.16.0"
-  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-11.16.0.tgz#e75865442278be49e411ca9105c9139edc572811"
-  integrity sha512-ngdWPjg31rD4WGXFi0eZ00DQQqKKu04QExyv/ymlC+3k+WIgYVFbt6gS5JsFPbJODTF/r8XiE/X+SsoT9c0ocw==
+motion-utils@^11.18.1:
+  version "11.18.1"
+  resolved "https://registry.yarnpkg.com/motion-utils/-/motion-utils-11.18.1.tgz#671227669833e991c55813cf337899f41327db5b"
+  integrity sha512-49Kt+HKjtbJKLtgO/LKj9Ld+6vw9BjH5d9sc40R/kVyH8GLAXgT42M2NnuPcJNuA3s9ZfZBUcwIgpmZWGEE+hA==
 
 ms@^2.1.1, ms@^2.1.3:
   version "2.1.3"
@@ -3320,10 +3326,10 @@ three-mesh-bvh@^0.7.8:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.7.8.tgz#83156e4d3945734db076de1c94809331481b3fdd"
   integrity sha512-BGEZTOIC14U0XIRw3tO4jY7IjP7n7v24nv9JXS1CyeVRWOCkcOMhRnmENUjuV39gktAw4Ofhr0OvIAiTspQrrw==
 
-three-stdlib@^2.34.0:
-  version "2.35.3"
-  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.35.3.tgz#4309511bd3f906bb4117b86403203e1899b92807"
-  integrity sha512-MS4IJHqz7yEwxC0Atq3eMfqTcdAMlkA6KWNs04fzVJRVp5AELZVFiWbNVtb0Q1lXDFROb75pw+xr+z+UoWxT9Q==
+three-stdlib@^2.35.6:
+  version "2.35.7"
+  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.35.7.tgz#13d345722d33328e2ffa820afadbf35a7b241c5b"
+  integrity sha512-k1oDqa1GYT4smhsN204DtmcQLfDuzSD4bbGmErTvUH40dpcwgBUgbwMzYYVWYB5tT7u0KBvAQpwuAPEXuwJVpQ==
   dependencies:
     "@types/draco3d" "^1.4.0"
     "@types/offscreencanvas" "^2019.6.4"
@@ -3494,11 +3500,6 @@ utility-types@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.11.0.tgz#607c40edb4f258915e901ea7995607fdf319424c"
   integrity sha512-6Z7Ma2aVEWisaL6TvBCy7P8rm2LQoPv6dJ7ecIaIixHcwfbJ0x7mWdbcwlIM5IGQxPZSFYeqRCqlOOeKoJYMkw==
-
-uuid@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.1.tgz#e188d4c8853cc722220392c424cd637f32293f30"
-  integrity sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==
 
 webgl-constants@^1.1.1:
   version "1.1.1"

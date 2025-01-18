@@ -44,7 +44,7 @@ export const TopPageAboutMe = () => {
 					alt="Japan"
 					width={350}
 					height={0}
-					className="opacity-70 blur-[1px]"
+					className="opacity-70 blur-[1px] pointer-events-none"
 				/>
 			),
 		},

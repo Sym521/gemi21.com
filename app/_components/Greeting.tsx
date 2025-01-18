@@ -3,7 +3,7 @@ import { LinearGradient } from "react-text-gradients";
 
 export const Greeting = () => {
 	return (
-		<div className="my-6 space-y-6 mr-auto font-Noto_Sans_JP">
+		<div className="my-6 space-y-6 mr-auto font-Noto_Sans_JP select-none">
 			<div className="flex text-6xl md:text-7xl font-bold">
 				<LinearGradient gradient={["to left", "#818CF8 ,#5B21B6"]}>
 					Hi there
