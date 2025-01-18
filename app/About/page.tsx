@@ -1,7 +1,6 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
-import { AuroraBackground } from "../_components/ui/aurora-background";
 import Marquee from "../_components/marquee";
 import { FaPython, FaReact, FaUnity } from "react-icons/fa6";
 import {
@@ -14,11 +13,12 @@ import {
 	SiTensorflow,
 	SiFastapi,
 } from "react-icons/si";
+import { Separator } from "../_components/ui/separator";
+import Link from "next/link";
 
 export default function About() {
 	return (
-		<div className="w-full h-fit text-slate-800">
-			{/* <AuroraBackground> */}
+		<div className="w-full h-fit bg-gradient-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
 			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
 				<Header />
 				<div className="mt-8">
@@ -42,6 +42,7 @@ export default function About() {
 						</p>
 					</span>
 				</div>
+				<Separator className="my-2" />
 				<div className="my-4">
 					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Skills
@@ -87,19 +88,39 @@ export default function About() {
 						<div className="space-y-2 mt-2">
 							<span className="flex gap-1">
 								<p>Framework:</p>
-								<p className="text-fuchsia-600">Next.js</p>
+								<Link
+									href={"https://nextjs.org"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Next.js
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Deployment:</p>
-								<p className="text-fuchsia-600">Vercel</p>
+								<Link
+									href={"https://vercel.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Vercel
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Styling:</p>
-								<p className="text-fuchsia-600">TailwindCSS</p>
+								<Link
+									href={"https://tailwindcss.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									TailwindCSS
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Format and Lint:</p>
-								<p className="text-fuchsia-600">Biome</p>
+								<Link
+									href={"https://biomejs.dev"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Biome
+								</Link>
 							</span>
 						</div>
 					</div>
@@ -140,7 +161,6 @@ export default function About() {
 				</div>
 				<Footer />
 			</main>
-			{/* </AuroraBackground> */}
 		</div>
 	);
 }

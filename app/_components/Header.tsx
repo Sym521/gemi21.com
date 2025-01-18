@@ -1,12 +1,13 @@
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
+import { Separator } from "./ui/separator";
 
 export const Header = () => {
 	return (
-		<div className="flex items-center backdrop-blur-sm bg-white/40 text-slate-500 px-4 py-2 rounded-xl">
+		<div className="sticky top-2 z-50 flex items-center border-2 border-slate-300 backdrop-blur-sm bg-white/40 text-slate-500 px-4 py-2 rounded-3xl">
 			<Link
 				href="/"
-				className="px-1.5 font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto bg-indigo-100 rounded-xl"
+				className="px-1.5 font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto bg-indigo-50 rounded-xl"
 			>
 				G
 			</Link>
@@ -21,7 +22,7 @@ export const Header = () => {
 					🚧Project
 				</Link>
 				<div className="hidden sm:inline-flex space-x-8">
-					<p>|</p>
+					<Separator orientation="vertical" />
 					<Link href="https://github.com/Sym521">
 						<GitHubLogoIcon
 							width={25}
