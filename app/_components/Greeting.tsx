@@ -10,7 +10,7 @@ export const Greeting = () => {
 				</LinearGradient>
 				<p>👋</p>
 			</div>
-			<div className="font-medium text-lg sm:text-xl md:text-3xl">
+			<div className="font-medium text-base sm:text-xl md:text-3xl">
 				<p className="">My name is Sym! I&apos;m a CS student in japan!</p>
 				<div className="mt-2 font-medium">
 					Currently I&apos;m crazy about...

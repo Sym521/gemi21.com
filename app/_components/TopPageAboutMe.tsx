@@ -40,11 +40,11 @@ export const TopPageAboutMe = () => {
 			className: "row-span-1 md:col-span-1 md:row-span-1",
 			background: (
 				<Image
-					src="/images/sakura.jpg"
+					src="/images/topLandscape.jpg"
 					alt="Japan"
 					width={350}
 					height={0}
-					className="opacity-70 blur-[1px] pointer-events-none"
+					className="opacity-95 pointer-events-none"
 				/>
 			),
 		},
@@ -115,8 +115,8 @@ export const TopPageAboutMe = () => {
 		},
 	];
 	return (
-		<div>
-			<h1 className="mt-14 mb-4 text-3xl font-Poppins font-black flex justify-center items-center">
+		<div className="my-6">
+			<h1 className="my-4 text-3xl font-Poppins font-black flex justify-center items-center">
 				About Me
 			</h1>
 			<div>
