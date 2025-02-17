@@ -6,5 +6,11 @@ export default function BlogLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	return <div><Header></Header>{children}<Footer></Footer></div>;
+	return (
+		<div>
+			<Header></Header>
+			{children}
+			<Footer></Footer>
+		</div>
+	);
 }
