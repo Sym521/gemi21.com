@@ -22,7 +22,7 @@ export default function About() {
 			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
 				<Header />
 				<div className="mt-8">
-					<h1 className="mb-2 text-3xl md:text-7xl inline-block font-bold text-left bg-gradient-to-r from-indigo-500 to-purple-300 bg-clip-text text-transparent">
+					<h1 className="mb-2 text-4xl md:text-7xl inline-block font-bold text-left bg-gradient-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
 						About
 					</h1>
 					<span className="max-w-[90%] text-left">
@@ -88,19 +88,39 @@ export default function About() {
 						<div className="space-y-2 mt-2">
 							<span className="flex gap-1">
 								<p>Framework:</p>
-								<Link href={"https://nextjs.org"} className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300">Next.js</Link>
+								<Link
+									href={"https://nextjs.org"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Next.js
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Deployment:</p>
-								<Link href={"https://vercel.com"} className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300">Vercel</Link>
+								<Link
+									href={"https://vercel.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Vercel
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Styling:</p>
-								<Link href={"https://tailwindcss.com"} className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300">TailwindCSS</Link>
+								<Link
+									href={"https://tailwindcss.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									TailwindCSS
+								</Link>
 							</span>
 							<span className="flex gap-1">
 								<p>Format and Lint:</p>
-								<Link href={"https://biomejs.dev"} className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300">Biome</Link>
+								<Link
+									href={"https://biomejs.dev"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Biome
+								</Link>
 							</span>
 						</div>
 					</div>
