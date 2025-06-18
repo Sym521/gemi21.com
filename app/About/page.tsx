@@ -27,7 +27,7 @@ export default function About() {
 					</h1>
 					<span className="max-w-[90%] text-left">
 						<p>
-							Hi!👋 I&apos;m Sym! I am currently a CS student at National
+							Hi!👋 I&apos;m Esu! I am currently a CS student at National
 							Institute of Technology.
 						</p>
 
