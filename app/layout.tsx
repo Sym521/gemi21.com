@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
 	title: "Gemi21",
-	description: "Personal website by Sym",
+	description: "Personal website by Esuu",
 };
 
 export default function RootLayout({
