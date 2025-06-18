@@ -19,7 +19,7 @@ import Link from "next/link";
 export default function About() {
 	return (
 		<div className="w-full h-fit bg-gradient-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
-			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
+			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-2 sm:px-8">
 				<Header />
 				<div className="mt-8">
 					<h1 className="mb-2 text-4xl md:text-7xl inline-block font-bold text-left bg-gradient-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
@@ -43,7 +43,7 @@ export default function About() {
 					</span>
 				</div>
 				<Separator className="my-2" />
-				<div className="my-4">
+				<div className="my-2">
 					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Skills
 					</h1>
@@ -78,14 +78,14 @@ export default function About() {
 							<SiLlvm style={{ width: 60, height: 60, color: "#1E293B" }} />
 						</Marquee>
 					</div>
-					<div className="my-4">
+					<div>
 						<p>
 							These are the languages and tools I like to use for my projects.
 						</p>
 
-						<h2 className="mt-2 text-xl font-bold">About this website🌐</h2>
+						<h2 className="my-2 text-xl font-bold">About this website🌐</h2>
 
-						<div className="space-y-2 mt-2">
+						<div className="space-y-1">
 							<span className="flex gap-1">
 								<p>Framework:</p>
 								<Link
