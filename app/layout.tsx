@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 	title: "Gemi21",
 	description: "A personal website by Esu",
 	openGraph: {
-		title: 'Gemi21',
-		description: 'A personal website by Esu.',
-		url: 'https://gemi21.com',
+		title: "Gemi21",
+		description: "A personal website by Esu.",
+		url: "https://gemi21.com",
 	},
 };
 

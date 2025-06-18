@@ -36,7 +36,7 @@ export const TopPageAboutMe = () => {
 		{
 			Icon: FaLocationDot,
 			name: "Japan",
-			description: "Born in🍜, Raised in♨️  ",
+			description: "Born in🍜, Raised in♨️",
 			className: "row-span-1 md:col-span-1 md:row-span-1",
 			background: (
 				<Image
