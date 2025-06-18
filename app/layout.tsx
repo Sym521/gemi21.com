@@ -19,7 +19,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
 	title: "Gemi21",
-	description: "Personal website by Esuu",
+	description: "A personal website by Esu",
+	openGraph: {
+		title: 'Gemi21',
+		description: 'A personal website by Esu.',
+		url: 'https://gemi21.com',
+	},
 };
 
 export default function RootLayout({
