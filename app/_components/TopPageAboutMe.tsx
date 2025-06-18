@@ -36,14 +36,14 @@ export const TopPageAboutMe = () => {
 		{
 			Icon: FaLocationDot,
 			name: "Japan",
-			description: "Born in🍜, Raised in♨️  ",
+			description: "Born in🍜, Raised in♨️",
 			className: "row-span-1 md:col-span-1 md:row-span-1",
 			background: (
 				<Image
-					src="/images/topLandscape.jpg"
+					src="/images/trimmedTopLandscape.jpg"
 					alt="Japan"
-					width={350}
-					height={0}
+					width={300}
+					height={300}
 					className="opacity-95 pointer-events-none"
 				/>
 			),
