@@ -5,7 +5,7 @@ export default async function Blog({
 	const { default: Post } = await import(`@/post/${slug}.mdx`);
 
 	return (
-		<div>
+		<div className="mt-4">
 			<Post />
 		</div>
 	);

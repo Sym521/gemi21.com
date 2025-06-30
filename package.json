@@ -27,7 +27,6 @@
     "cobe": "^0.6.3",
     "destyle.css": "^4.0.1",
     "framer-motion": "^11.18.1",
-    "gray-matter": "^4.0.3",
     "moment": "^2.30.1",
     "next": "15.3.3",
     "react": "19.1.0",
