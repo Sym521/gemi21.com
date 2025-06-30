@@ -1,0 +1,32 @@
+import separator from "@/components/Separator";
+export const postData = {
+    title: "[ja] 2026年度 東京農工大学工学部 編入学体験記",
+    description: "工学部 知能情報システム工学科 推薦入試の合格体験記",
+    date: "2025/07/11",
+};
+
+<div className="mb-4 space-y-2">
+    <h1 className="text-3xl font-bold text-left text-stone-600">
+        {postData.title}
+    </h1>
+    <p className="text-md md:text-lg text-left text-stone-500">
+        {postData.date} - {postData.description}
+    </p>
+</div>
+
+This is some **bold** and _italics_ text.
+
+This is a list in markdown:
+- Item 1
+- Item 2
+
+Here is a code snippet:
+```javascript
+console.log("Hello, world!");
+```
+
+日本語でも記事が書けますよ
+改行は空行でできます。<br />"brタグ"でもできます
+
+**Image:**
+<img src="/images/topLandscape.jpg" alt="sample" width="200" height="200" />

@@ -13,7 +13,9 @@ const getPosts = async (): Promise<Post[]> => {
 	const postsDirectory = path.join(process.cwd(), "post");
 	const filenames = (await import("fs/promises")).readdir(postsDirectory);
 
-	const posts = (await filenames).filter((filename) => filename.endsWith(".mdx"));
+	const posts = (await filenames).filter((filename) =>
+		filename.endsWith(".mdx"),
+	);
 
 	const postDataList = await Promise.all(
 		posts.map(async (filename) => {
@@ -22,7 +24,7 @@ const getPosts = async (): Promise<Post[]> => {
 			const mod = await import(`../../post/${slug}.mdx`);
 			const { title, description, date } = mod.postData;
 			return { slug, title, description, date };
-		})
+		}),
 	);
 
 	return postDataList;
@@ -37,7 +39,7 @@ const BlogHome = async () => {
 				Articles
 			</h1>
 			<Separator className="my-2" />
-			<div>
+			<div className="font-Noto_Sans_JP">
 				<ul>
 					{posts.map((post) => (
 						<li
@@ -49,7 +51,9 @@ const BlogHome = async () => {
 									{post.title}
 								</h2>
 								<div>
-									<p className="text-slate-600">{post.date} | {post.description}</p>
+									<p className="text-slate-600">
+										{post.date} | {post.description}
+									</p>
 								</div>
 							</Link>
 						</li>

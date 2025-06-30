@@ -1,6 +1,8 @@
 export default async function Blog({
 	params,
-}: { params: Promise<{ slug: string }> }) {
+}: {
+	params: Promise<{ slug: string }>;
+}) {
 	const slug = (await params).slug;
 	const { default: Post } = await import(`@/post/${slug}.mdx`);
 
