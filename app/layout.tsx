@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Oswald } from "next/font/google";
 import { Poppins } from "next/font/google";
+import { Sawarabi_Gothic } from "next/font/google";
 import "destyle.css";
 import "./globals.css";
 
@@ -15,6 +16,11 @@ const poppins = Poppins({
 	weight: "600",
 	subsets: ["latin"],
 	variable: "--font-Poppins",
+});
+export const sawarabi_gothic = Sawarabi_Gothic({
+	weight: "400",
+	subsets: ["latin"],
+	variable: "--font-Sawarabi_Gothic",
 });
 
 export const metadata: Metadata = {
@@ -31,9 +37,9 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html lang="en">
+		<html>
 			<body
-				className={`${inter.className} ${oswald.variable} ${poppins.variable}`}
+				className={`${inter.className} ${oswald.variable} ${poppins.variable} ${sawarabi_gothic.variable}`}
 			>
 				{children}
 			</body>
