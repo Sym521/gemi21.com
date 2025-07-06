@@ -5,11 +5,12 @@ export const postData = {
     date: "2025/07/11",
 };
 
-<div className="mb-4 space-y-2">
-    <h1 className="text-3xl font-bold text-left text-stone-600">
+<div className="mb-4 space-y-3 font-Zen_Kaku_Gothic_New text-stone-600">
+    <a href="/Blog" className="text-lg hover:underline">{"<"} Back to top</a>
+    <h1 className="text-3xl font-semibold text-left">
         {postData.title}
     </h1>
-    <p className="text-md md:text-lg text-left text-stone-500">
+    <p className="text-left">
         {postData.date} - {postData.description}
     </p>
 </div>
@@ -19,7 +20,6 @@ This is some **bold** and _italics_ text.
 This is a list in markdown:
 - Item 1
 - Item 2
-
 Here is a code snippet:
 ```javascript
 console.log("Hello, world!");
