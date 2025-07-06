@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 import tailwindcssAnimate from "tailwindcss-animate";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
 
 const config: Config = {
   darkMode: ["class"],
@@ -118,15 +117,6 @@ const config: Config = {
   	}
   },
   plugins: [
-    tailwindcssAnimate,
-    function addVariablesForColors({ addBase, theme }: { addBase: Function; theme: Function }) {
-      const allColors = flattenColorPalette(theme("colors"));
-      const newVars = Object.fromEntries(
-        Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-      );
-
-      addBase({ ":root": newVars });
-    },
   ],
 };
 
