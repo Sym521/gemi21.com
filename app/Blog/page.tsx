@@ -39,14 +39,14 @@ const BlogHome = async () => {
 				Articles
 			</h1>
 			<Separator className="my-2" />
-			<div className="font-Noto_Sans_JP">
+			<div>
 				<ul>
 					{posts.map((post) => (
 						<li
 							key={post.slug}
 							className="mb-4 p-1 hover:border border-slate-300 delay-75 rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105"
 						>
-							<Link href={`/Blog/${post.slug}`} className="block p-1">
+							<Link href={`/Blog/${post.slug}`} className="block p-1 font-noto_sans_jp">
 								<h2 className="text-2xl font-semibold text-blue-600">
 									{post.title}
 								</h2>
