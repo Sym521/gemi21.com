@@ -3,17 +3,17 @@ import type { MDXComponents } from 'mdx/types';
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         h1: ({ children, ...props }: any) => (
-            <h1 className="text-3xl font-bold text-left text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
+            <h1 className="my-2 py-2 text-2xl font-bold text-left text-slate-800 border-b border-slate-300 font-Zen_Kaku_Gothic_New" {...props}>
                 {children}
             </h1>
         ),
         h2: ({ children, ...props }: any) => (
-            <h2 className="text-2xl font-semibold text-left text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
+            <h2 className="my-2 text-xl font-semibold text-left text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
                 {children}
             </h2>
         ),
         h3: ({ children, ...props }: any) => (
-            <h3 className="text-xl font-semibold text-left text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
+            <h3 className="my-2 text-lg font-semibold text-left text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
                 {children}
             </h3>
         ),
@@ -23,7 +23,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             </p>
         ),
         ul: ({ children, ...props }: any) => (
-            <ul className="list-disc list-inside text-base md:text-lg text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
+            <ul className="my-2 list-disc list-inside text-base md:text-lg text-slate-800 font-Zen_Kaku_Gothic_New" {...props}>
                 {children}
             </ul>
         ),
@@ -36,10 +36,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <img
                 src={src}
                 alt={alt}
-                className="max-w-2xl h-auto rounded-lg shadow-md my-2 mx-auto block"
+                className="max-w-11/12 md:max-w-2/3 h-auto rounded-lg shadow-md my-2 mx-auto block"
                 {...props}
             />
         ),
+        
         ...components,
     };
 }
