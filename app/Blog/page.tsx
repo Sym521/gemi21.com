@@ -39,7 +39,7 @@ const BlogHome = async () => {
 				Articles
 			</h1>
 			<Separator className="my-2" />
-			<div>
+			<div className="font-Zen_Kaku_Gothic_New">
 				<ul>
 					{posts.map((post) => (
 						<li
@@ -50,7 +50,7 @@ const BlogHome = async () => {
 								href={`/Blog/${post.slug}`}
 								className="block p-1 font-noto_sans_jp"
 							>
-								<h2 className="text-2xl font-semibold text-blue-700">
+								<h2 className="text-2xl font-bold text-blue-800">
 									{post.title}
 								</h2>
 								<div>
