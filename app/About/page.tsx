@@ -42,7 +42,7 @@ export default function About() {
 						</p>
 					</span>
 				</div>
-				<Separator />
+				<Separator className="my-2" />
 				<div className="my-2">
 					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Skills
