@@ -33,7 +33,7 @@ export default function About() {
 
 						<p>
 							I am curious about web designing, artificial intelligence, and
-							quantum computing.
+							virtual reality.
 						</p>
 
 						<p className="flex gap-1 items-center">
