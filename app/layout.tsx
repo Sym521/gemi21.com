@@ -4,7 +4,6 @@ import { Oswald } from "next/font/google";
 import { Poppins } from "next/font/google";
 import { Noto_Sans_JP } from "next/font/google";
 import { Zen_Kaku_Gothic_New } from "next/font/google";
-import "destyle.css";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,12 +13,12 @@ const oswald = Oswald({
 	variable: "--font-Oswald",
 });
 const poppins = Poppins({
-	weight: "600",
+	weight: ["400", "600"],
 	subsets: ["latin"],
 	variable: "--font-Poppins",
 });
 const noto_sans_jp = Noto_Sans_JP({
-	weight: "400",
+	weight: ["400", "700"],
 	subsets: ["latin"],
 	variable: "--font-Noto_Sans_JP",
 });

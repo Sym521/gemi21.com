@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 
 export const Header = () => {
 	return (
-		<div className="sticky top-2 z-50 flex items-center border-2 border-slate-300 backdrop-blur-sm bg-white/40 text-slate-500 px-4 py-2 rounded-3xl">
+		<div className="sticky top-2 z-50 flex items-center border-2 border-slate-300 backdrop-blur-xs bg-white/40 text-slate-500 px-4 py-2 rounded-3xl">
 			<Link
 				href="/"
 				className="px-1.5 font-Poppins font-extrabold hover:text-slate-900 text-xl md:text-4xl mr-auto bg-indigo-50 rounded-xl"

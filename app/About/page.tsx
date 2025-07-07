@@ -1,7 +1,7 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { Footer } from "../_components/Footer";
 import { Header } from "../_components/Header";
-import Marquee from "../_components/marquee";
+import { Marquee } from "../_components/marquee";
 import { FaPython, FaReact, FaUnity } from "react-icons/fa6";
 import {
 	SiTypescript,
@@ -18,11 +18,11 @@ import Link from "next/link";
 
 export default function About() {
 	return (
-		<div className="w-full h-fit bg-gradient-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
+		<div className="w-full h-fit bg-linear-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
 			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-2 sm:px-8">
 				<Header />
 				<div className="mt-8">
-					<h1 className="mb-2 text-4xl md:text-7xl inline-block font-bold text-left bg-gradient-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
+					<h1 className="mb-2 text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
 						About
 					</h1>
 					<span className="max-w-[90%] text-left">
@@ -44,7 +44,7 @@ export default function About() {
 				</div>
 				<Separator className="my-2" />
 				<div className="my-2">
-					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Skills
 					</h1>
 					<div className="relative flex h-[100px]  flex-col items-center justify-center overflow-hidden rounded-lg ">
@@ -126,7 +126,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className="my-4">
-					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Achievement
 					</h1>
 					<div>
@@ -138,7 +138,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className="mt-4 mb-8">
-					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-gradient-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 						Experience
 					</h1>
 
