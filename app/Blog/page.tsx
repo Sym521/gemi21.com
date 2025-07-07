@@ -50,7 +50,7 @@ const BlogHome = async () => {
 								href={`/Blog/${post.slug}`}
 								className="block p-1 font-noto_sans_jp"
 							>
-								<h2 className="text-2xl font-semibold text-blue-600">
+								<h2 className="text-2xl font-semibold text-blue-700">
 									{post.title}
 								</h2>
 								<div>

@@ -146,7 +146,7 @@ export default function About() {
 						Software Engineer (Intern)
 					</h2>
 					<span>
-						<p className="text-red-400">@AKARI Inc.</p>
+						<p className="text-red-400">Company A</p>
 						<p>2024.08 - 2024.09</p>
 					</span>
 					<div className="flex gap-2 mt-1">
