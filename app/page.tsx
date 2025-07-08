@@ -1,4 +1,4 @@
-import { Footer } from "./_components/Footer";
+import { Footer } from "./_components/ui/Footer";
 import { Greeting } from "./_components/Greeting";
 import { Header } from "./_components/Header";
 import { TopPageAboutMe } from "./_components/TopPageAboutMe";

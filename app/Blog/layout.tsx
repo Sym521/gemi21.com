@@ -1,4 +1,4 @@
-import { Footer } from "@/app/_components/Footer";
+import { Footer } from "@/app/_components/ui/Footer";
 import { Header } from "@/app/_components/Header";
 
 export default function BlogLayout({

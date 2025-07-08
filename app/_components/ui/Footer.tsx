@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { FaSpotify } from "react-icons/fa";
 import { useState } from "react";
+import "@/lib/callSpotifyAPI";
 
 export const Footer = () => {
 	const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -12,9 +13,9 @@ export const Footer = () => {
 				<div className="flex flex-col">
 					<p className="text-sm font-medium">Now Playing</p>
 					{isPlaying ? (
-						<p className="text-xs text-slate-600">Not Listening</p>
-					) : (
 						<p className="text-xs text-slate-600">Song Title - Artist Name</p>
+					) : (
+						<p className="text-xs text-slate-600">Not Listening</p>
 					)}
 				</div>
 			</div>

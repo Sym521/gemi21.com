@@ -1,6 +1,6 @@
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { Separator } from "./ui/separator";
+import { Separator } from "./separator";
 
 export const Header = () => {
 	return (

@@ -1,6 +1,6 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { Footer } from "../_components/Footer";
-import { Header } from "../_components/Header";
+import { Footer } from "../_components/ui/Footer";
+import { Header } from "../_components/ui/Header";
 import { Marquee } from "../_components/marquee";
 import { FaPython, FaReact, FaUnity } from "react-icons/fa6";
 import {

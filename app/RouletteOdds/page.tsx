@@ -2,7 +2,7 @@
 
 import { Input } from "@/app/_components/ui/input";
 import { useState } from "react";
-import { Footer } from "../_components/Footer";
+import { Footer } from "../_components/ui/Footer";
 import { Header } from "../_components/Header";
 import { CalcOdds, type WinningBet } from "../_components/roulette/CalcOdds";
 import { Button } from "../_components/ui/button";
