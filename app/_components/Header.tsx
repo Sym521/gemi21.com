@@ -12,7 +12,7 @@ export const Header = () => {
 				G
 			</Link>
 			<div className="flex space-x-8">
-				<Link href="/About" className="hover:text-slate-800">
+				<Link href="/About" className="hover:text-slate-900">
 					About
 				</Link>
 				<Link href="/Blog" className="hover:text-slate-900">
