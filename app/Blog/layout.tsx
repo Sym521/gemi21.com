@@ -1,5 +1,5 @@
 import { Footer } from "@/app/_components/ui/Footer";
-import { Header } from "@/app/_components/Header";
+import { Header } from "@/app/_components/ui/Header";
 
 export default function BlogLayout({
 	children,

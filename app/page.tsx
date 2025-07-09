@@ -1,6 +1,6 @@
 import { Footer } from "./_components/ui/Footer";
 import { Greeting } from "./_components/Greeting";
-import { Header } from "./_components/Header";
+import { Header } from "./_components/ui/Header";
 import { TopPageAboutMe } from "./_components/TopPageAboutMe";
 
 export default function Home() {
