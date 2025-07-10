@@ -115,8 +115,8 @@ export const TopPageAboutMe = () => {
 		},
 	];
 	return (
-		<div className="my-6">
-			<h1 className="my-4 text-3xl font-Poppins font-black flex justify-center items-center">
+		<div className="my-4 md:my-6">
+			<h1 className="my-2 text-2xl md:text-3xl font-Poppins font-bold flex justify-center items-center">
 				About Me
 			</h1>
 			<div>
