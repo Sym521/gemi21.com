@@ -15,10 +15,14 @@ export const Footer = () => {
 						<p className="text-slate-700 font-semibold font-Noto_Sans_JP">
 							Now Playing
 						</p>
-						<p className="text-slate-600 text-sm font-Noto_Sans_JP">{track.name} - {track.artist}</p>
+						<p className="text-slate-600 text-sm font-Noto_Sans_JP">
+							{track.name} - {track.artist}
+						</p>
 					</div>
 				) : (
-					<p className="border-slate-500 text-slate-600 font-semibold font-Noto_Sans_JP">Not Listening</p>
+					<p className="border-slate-500 text-slate-600 font-semibold font-Noto_Sans_JP">
+						Not Listening
+					</p>
 				)}
 			</div>
 			<div className="flex flex-col md:flex-row px-6 justify-between items-start md:items-center space-y-4 md:space-y-0">
