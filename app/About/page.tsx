@@ -65,7 +65,9 @@ export default function About() {
 								<FaReact style={{ width: 60, height: 60, color: "#1E293B" }} />
 
 								<FaPython style={{ width: 60, height: 60, color: "#1E293B" }} />
-								<SiFastapi style={{ width: 60, height: 60, color: "#1E293B" }} />
+								<SiFastapi
+									style={{ width: 60, height: 60, color: "#1E293B" }}
+								/>
 
 								<SiTensorflow
 									style={{ width: 60, height: 60, color: "#1E293B" }}

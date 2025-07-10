@@ -108,7 +108,7 @@ export const TopPageAboutMe = () => {
 						href="https://open.spotify.com/user/qxr4091wotokv8qatsd5kl86a?si=5e696083677a4fc6"
 						className="flex items-center gap-2 hover:text-slate-800 transition"
 					>
-						<FaSpotify className="w-6.5 h-6.5"/>
+						<FaSpotify className="w-6.5 h-6.5" />
 						Spotify
 					</Link>
 					<Link
