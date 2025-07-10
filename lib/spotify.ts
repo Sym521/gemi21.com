@@ -1,10 +1,10 @@
-const clientId = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
-const clientSecret = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET;
-const refresh_token = process.env.NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN;
+const clientId = process.env.SPOTIFY_CLIENT_ID;
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
 async function getAccessToken() {
     if (!refresh_token) {
-        throw new Error("NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN is not defined");
+        throw new Error("SPOTIFY_REFRESH_TOKEN is not defined");
     }
 
     const tokenResponse = await fetch("https://accounts.spotify.com/api/token", {
