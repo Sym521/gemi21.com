@@ -1,16 +1,11 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { Footer } from "../_components/ui/Footer";
 import { Header } from "../_components/ui/Header";
-import { Marquee } from "../_components/marquee";
-import { FaPython, FaReact, FaUnity } from "react-icons/fa6";
+import { SkillsMarquee } from "../_components/ui/skillsMarquee";
+import { FaPython, FaReact } from "react-icons/fa6";
 import {
 	SiTypescript,
 	SiJavascript,
-	SiAstro,
-	SiBiome,
-	SiCplusplus,
-	SiLlvm,
-	SiTensorflow,
 	SiFastapi,
 } from "react-icons/si";
 import { Separator } from "../_components/ui/separator";
@@ -48,39 +43,7 @@ export default function About() {
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Skills
 						</h1>
-						<div className="relative flex h-[100px]  flex-col items-center justify-center overflow-hidden rounded-lg ">
-							<Marquee className="[--duration:15s]">
-								<SiTypescript
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<SiJavascript
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<RiNextjsFill
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<RiTailwindCssFill
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<FaReact style={{ width: 60, height: 60, color: "#1E293B" }} />
-
-								<FaPython style={{ width: 60, height: 60, color: "#1E293B" }} />
-								<SiFastapi
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-
-								<SiTensorflow
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<FaUnity style={{ width: 60, height: 60, color: "#1E293B" }} />
-								<SiBiome style={{ width: 60, height: 60, color: "#1E293B" }} />
-								<SiAstro style={{ width: 60, height: 60, color: "#1E293B" }} />
-								<SiCplusplus
-									style={{ width: 60, height: 60, color: "#1E293B" }}
-								/>
-								<SiLlvm style={{ width: 60, height: 60, color: "#1E293B" }} />
-							</Marquee>
-						</div>
+						<SkillsMarquee />
 						<div>
 							<p>
 								These are the languages and tools I like to use for my projects.
