@@ -3,11 +3,7 @@ import { Footer } from "../_components/ui/Footer";
 import { Header } from "../_components/ui/Header";
 import { SkillsMarquee } from "../_components/ui/skillsMarquee";
 import { FaPython, FaReact } from "react-icons/fa6";
-import {
-	SiTypescript,
-	SiJavascript,
-	SiFastapi,
-} from "react-icons/si";
+import { SiTypescript, SiJavascript, SiFastapi } from "react-icons/si";
 import { Separator } from "../_components/ui/separator";
 import Link from "next/link";
 
@@ -93,45 +89,74 @@ export default function About() {
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Education
 						</h1>
-						<div>
+						<div className="border-l-2 border-slate-500 pl-2">
 							<h2 className="mt-2 text-lg font-semibold">
 								National Institute of Technology, College at somewhere in Kyushu
 							</h2>
-							<p className="text-sky-600">2021.04 - 2026.03</p>
 							<p className="text-slate-600">Faculty of Computer Science</p>
+							<p className="text-blue-600">2021.04 - 2026.03</p>
 						</div>
 					</div>
 					<div>
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Achievement
 						</h1>
-						<div>
-							<h2 className="mt-2 text-lg font-semibold">
-								DCON 2024 (AI and business contest for National Institute of
-								Technology students)
-							</h2>
-							<p className="text-amber-700">🥉3rd place</p>
+						<div className="mt-2 space-y-4">
+							<div className="border-l-2 border-slate-500 pl-2">
+								<Link
+									href={"https://d-s-festival.jp"}
+									className="text-lg font-semibold hover:underline"
+								>
+									Digital Student Festival Award S×PARK
+								</Link>
+								<p className="text-sm text-slate-600">2025.07</p>
+								<p className="text-slate-500">🥈2nd place + audience award</p>
+							</div>
+							<div className="border-l-2 border-slate-500 pl-2">
+								<Link
+									href={
+										"https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
+									}
+									className="text-lg font-semibold hover:underline"
+								>
+									International Workshop Seating/Sitting Comfort
+								</Link>
+								<p className="text-sm text-slate-600">2024.10</p>
+								<p className="text-slate-700">Participated</p>
+							</div>
+							<div className="border-l-2 border-slate-500 pl-2">
+								<Link
+									href={"https://dcon.ai"}
+									className="text-lg font-semibold hover:underline"
+								>
+									DCON 2024
+								</Link>
+								<p className="text-sm text-slate-600">2024.05</p>
+								<p className="text-amber-700">🥉3rd place</p>
+							</div>
 						</div>
 					</div>
 					<div>
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Experience
 						</h1>
-						<h2 className="mt-2 text-lg font-semibold">
-							Software Engineer (Intern)
-						</h2>
-						<span>
-							<p className="text-red-400">Company A</p>
-							<p>2024.08 - 2024.09</p>
-						</span>
-						<div className="flex gap-2 mt-1">
-							<SiJavascript style={{ width: 25, height: 25 }} />
-							<SiTypescript style={{ width: 25, height: 25 }} />
-							<FaReact style={{ width: 25, height: 25 }} />
-							<RiNextjsFill style={{ width: 25, height: 25 }} />
-							<RiTailwindCssFill style={{ width: 25, height: 25 }} />
-							<FaPython style={{ width: 25, height: 25 }} />
-							<SiFastapi style={{ width: 25, height: 25 }} />
+						<div className="border-l-2 border-slate-500 pl-2">
+							<h2 className="mt-2 text-lg font-semibold">
+								Software Engineer (Intern)
+							</h2>
+							<span>
+								<p>Company A</p>
+								<p className="text-blue-600">2024.08 - 2024.09</p>
+							</span>
+							<div className="flex gap-2 mt-1">
+								<SiJavascript style={{ width: 25, height: 25 }} />
+								<SiTypescript style={{ width: 25, height: 25 }} />
+								<FaReact style={{ width: 25, height: 25 }} />
+								<RiNextjsFill style={{ width: 25, height: 25 }} />
+								<RiTailwindCssFill style={{ width: 25, height: 25 }} />
+								<FaPython style={{ width: 25, height: 25 }} />
+								<SiFastapi style={{ width: 25, height: 25 }} />
+							</div>
 						</div>
 					</div>
 				</div>
