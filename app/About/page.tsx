@@ -1,6 +1,4 @@
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { Footer } from "../_components/ui/Footer";
-import { Header } from "../_components/ui/Header";
 import { SkillsMarquee } from "../_components/ui/skillsMarquee";
 import { FaPython, FaReact } from "react-icons/fa6";
 import { SiTypescript, SiJavascript, SiFastapi } from "react-icons/si";
@@ -9,169 +7,168 @@ import Link from "next/link";
 
 export default function About() {
 	return (
-		<div className="w-full h-fit bg-linear-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
-			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
-				<Header />
-				<div className="mt-4 space-y-2">
-					<h1 className="text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
-						About
+		<div>
+			<div className="mt-4 space-y-2">
+				<h1 className="text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
+					About
+				</h1>
+				<span className="max-w-[90%] text-left">
+					<p>
+						Hi!👋 I&apos;m Esu! I am currently a CS student at National
+						Institute of Technology.
+					</p>
+
+					<p>
+						I am curious about web designing, artificial intelligence, and
+						virtual reality.
+					</p>
+
+					<p className="flex gap-1 items-center">
+						My favorite framework is Next.js
+						<RiNextjsFill />
+					</p>
+				</span>
+			</div>
+			<Separator className="my-2" />
+			<div className="space-y-10 mt-4 mb-16">
+				<div>
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+						Skills
 					</h1>
-					<span className="max-w-[90%] text-left">
+					<SkillsMarquee />
+					<div>
 						<p>
-							Hi!👋 I&apos;m Esu! I am currently a CS student at National
-							Institute of Technology.
+							These are the languages and tools I like to use for my projects.
 						</p>
-
-						<p>
-							I am curious about web designing, artificial intelligence, and
-							virtual reality.
-						</p>
-
-						<p className="flex gap-1 items-center">
-							My favorite framework is Next.js
-							<RiNextjsFill />
-						</p>
-					</span>
+						<h2 className="mt-4 text-2xl font-bold">About this website🌐</h2>
+						<div className="mt-2 space-y-1">
+							<span className="flex gap-1">
+								<p>Framework:</p>
+								<Link
+									href={"https://nextjs.org"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Next.js
+								</Link>
+							</span>
+							<span className="flex gap-1">
+								<p>Deployment:</p>
+								<Link
+									href={"https://vercel.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Vercel
+								</Link>
+							</span>
+							<span className="flex gap-1">
+								<p>Styling:</p>
+								<Link
+									href={"https://tailwindcss.com"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									TailwindCSS
+								</Link>
+							</span>
+							<span className="flex gap-1">
+								<p>Format and Lint:</p>
+								<Link
+									href={"https://biomejs.dev"}
+									className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
+								>
+									Biome
+								</Link>
+							</span>
+						</div>
+					</div>
 				</div>
-				<Separator className="my-2" />
-				<div className="space-y-10 mt-4 mb-16">
+				<div>
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+						Education
+					</h1>
 					<div>
-						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
-							Skills
-						</h1>
-						<SkillsMarquee />
-						<div>
-							<p>
-								These are the languages and tools I like to use for my projects.
-							</p>
-							<h2 className="mt-4 text-2xl font-bold">About this website🌐</h2>
-							<div className="mt-2 space-y-1">
-								<span className="flex gap-1">
-									<p>Framework:</p>
-									<Link
-										href={"https://nextjs.org"}
-										className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
-									>
-										Next.js
-									</Link>
-								</span>
-								<span className="flex gap-1">
-									<p>Deployment:</p>
-									<Link
-										href={"https://vercel.com"}
-										className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
-									>
-										Vercel
-									</Link>
-								</span>
-								<span className="flex gap-1">
-									<p>Styling:</p>
-									<Link
-										href={"https://tailwindcss.com"}
-										className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
-									>
-										TailwindCSS
-									</Link>
-								</span>
-								<span className="flex gap-1">
-									<p>Format and Lint:</p>
-									<Link
-										href={"https://biomejs.dev"}
-										className="text-fuchsia-600 hover:text-slate-800 transition-colors duration-300"
-									>
-										Biome
-									</Link>
-								</span>
-							</div>
-						</div>
-					</div>
-					<div>
-						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
-							Education
-						</h1>
-						<div>
-							<div className="border-l-2 border-slate-500 pl-2">
-								<h2 className="mt-2 text-lg font-semibold">
-									Tokyo University of Agriculture and Technology
-								</h2>
-								<p className="text-slate-600">Bachelor of Engineering - BS, Computer Science</p>
-								<p className="text-blue-600">2026.04 - current</p>
-							</div>
-							<div className="border-l-2 border-slate-500 pl-2">
-								<h2 className="mt-2 text-lg font-semibold">
-									National Institute of Technology, Oita College
-								</h2>
-								<p className="text-slate-600">Associate Degree of Engineering, Computer Science</p>
-								<p className="text-blue-600">2021.04 - 2026.03</p>
-							</div>
-						</div>
-
-					</div>
-					<div>
-						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
-							Achievement
-						</h1>
-						<div className="mt-2 space-y-4">
-							<div className="border-l-2 border-slate-500 pl-2">
-								<Link
-									href={"https://d-s-festival.jp"}
-									className="text-lg font-semibold hover:underline"
-								>
-									Digital Student Festival Award S×PARK
-								</Link>
-								<p className="text-sm text-slate-600">2025.07</p>
-								<p className="text-slate-500">🥈2nd place + audience award</p>
-							</div>
-							<div className="border-l-2 border-slate-500 pl-2">
-								<Link
-									href={
-										"https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
-									}
-									className="text-lg font-semibold hover:underline"
-								>
-									International Workshop Seating/Sitting Comfort
-								</Link>
-								<p className="text-sm text-slate-600">2024.10</p>
-								<p className="text-slate-700">Participated</p>
-							</div>
-							<div className="border-l-2 border-slate-500 pl-2">
-								<Link
-									href={"https://dcon.ai"}
-									className="text-lg font-semibold hover:underline"
-								>
-									DCON 2024
-								</Link>
-								<p className="text-sm text-slate-600">2024.05</p>
-								<p className="text-amber-700">🥉3rd place</p>
-							</div>
-						</div>
-					</div>
-					<div>
-						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
-							Experience
-						</h1>
 						<div className="border-l-2 border-slate-500 pl-2">
 							<h2 className="mt-2 text-lg font-semibold">
-								Software Engineer (Intern)
+								Tokyo University of Agriculture and Technology
 							</h2>
-							<span>
-								<p>Company A</p>
-								<p className="text-blue-600">2024.08 - 2024.09</p>
-							</span>
-							<div className="flex gap-2 mt-1">
-								<SiJavascript style={{ width: 25, height: 25 }} />
-								<SiTypescript style={{ width: 25, height: 25 }} />
-								<FaReact style={{ width: 25, height: 25 }} />
-								<RiNextjsFill style={{ width: 25, height: 25 }} />
-								<RiTailwindCssFill style={{ width: 25, height: 25 }} />
-								<FaPython style={{ width: 25, height: 25 }} />
-								<SiFastapi style={{ width: 25, height: 25 }} />
-							</div>
+							<p className="text-slate-600">
+								Bachelor of Engineering - BS, Computer Science
+							</p>
+							<p className="text-blue-600">2026.04 - current</p>
+						</div>
+						<div className="border-l-2 border-slate-500 pl-2">
+							<h2 className="mt-2 text-lg font-semibold">
+								National Institute of Technology, Oita College
+							</h2>
+							<p className="text-slate-600">
+								Associate Degree of Engineering, Computer Science
+							</p>
+							<p className="text-blue-600">2021.04 - 2026.03</p>
 						</div>
 					</div>
 				</div>
-				<Footer />
-			</main>
+				<div>
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+						Achievement
+					</h1>
+					<div className="mt-2 space-y-4">
+						<div className="border-l-2 border-slate-500 pl-2">
+							<Link
+								href={"https://d-s-festival.jp"}
+								className="text-lg font-semibold hover:underline"
+							>
+								Digital Student Festival Award S×PARK
+							</Link>
+							<p className="text-sm text-slate-600">2025.07</p>
+							<p className="text-slate-500">🥈2nd place + audience award</p>
+						</div>
+						<div className="border-l-2 border-slate-500 pl-2">
+							<Link
+								href={
+									"https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
+								}
+								className="text-lg font-semibold hover:underline"
+							>
+								International Workshop Seating/Sitting Comfort
+							</Link>
+							<p className="text-sm text-slate-600">2024.10</p>
+							<p className="text-slate-700">Participated</p>
+						</div>
+						<div className="border-l-2 border-slate-500 pl-2">
+							<Link
+								href={"https://dcon.ai"}
+								className="text-lg font-semibold hover:underline"
+							>
+								DCON 2024
+							</Link>
+							<p className="text-sm text-slate-600">2024.05</p>
+							<p className="text-amber-700">🥉3rd place</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
+						Experience
+					</h1>
+					<div className="border-l-2 border-slate-500 pl-2">
+						<h2 className="mt-2 text-lg font-semibold">
+							Software Engineer (Intern)
+						</h2>
+						<span>
+							<p>Company A</p>
+							<p className="text-blue-600">2024.08 - 2024.09</p>
+						</span>
+						<div className="flex gap-2 mt-1">
+							<SiJavascript style={{ width: 25, height: 25 }} />
+							<SiTypescript style={{ width: 25, height: 25 }} />
+							<FaReact style={{ width: 25, height: 25 }} />
+							<RiNextjsFill style={{ width: 25, height: 25 }} />
+							<RiTailwindCssFill style={{ width: 25, height: 25 }} />
+							<FaPython style={{ width: 25, height: 25 }} />
+							<SiFastapi style={{ width: 25, height: 25 }} />
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }

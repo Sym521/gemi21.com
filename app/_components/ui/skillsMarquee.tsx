@@ -5,6 +5,7 @@ import {
 	SiBiome,
 	SiCplusplus,
 	SiFastapi,
+	SiFigma,
 	SiJavascript,
 	SiLlvm,
 	SiTensorflow,
@@ -35,6 +36,7 @@ export const SkillsMarquee = () => {
 				<SiAstro style={{ width: 60, height: 60, color: "#1E293B" }} />
 				<SiCplusplus style={{ width: 60, height: 60, color: "#1E293B" }} />
 				<SiLlvm style={{ width: 60, height: 60, color: "#1E293B" }} />
+				<SiFigma style={{ width: 60, height: 60, color: "#1E293B" }} />
 			</Marquee>
 		</div>
 	);
