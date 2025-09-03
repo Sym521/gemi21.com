@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function About() {
 	return (
 		<div className="w-full h-fit bg-linear-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
-			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-2 sm:px-8">
+			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
 				<Header />
 				<div className="mt-4 space-y-2">
 					<h1 className="text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
@@ -34,7 +34,7 @@ export default function About() {
 					</span>
 				</div>
 				<Separator className="my-2" />
-				<div className="space-y-6 mt-4 mb-8">
+				<div className="space-y-10 mt-4 mb-16">
 					<div>
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Skills
@@ -44,8 +44,8 @@ export default function About() {
 							<p>
 								These are the languages and tools I like to use for my projects.
 							</p>
-							<h2 className="mt-4 text-xl font-bold">About this website🌐</h2>
-							<div className="space-y-1">
+							<h2 className="mt-4 text-2xl font-bold">About this website🌐</h2>
+							<div className="mt-2 space-y-1">
 								<span className="flex gap-1">
 									<p>Framework:</p>
 									<Link
@@ -89,13 +89,23 @@ export default function About() {
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
 							Education
 						</h1>
-						<div className="border-l-2 border-slate-500 pl-2">
-							<h2 className="mt-2 text-lg font-semibold">
-								National Institute of Technology, College at somewhere in Kyushu
-							</h2>
-							<p className="text-slate-600">Faculty of Computer Science</p>
-							<p className="text-blue-600">2021.04 - 2026.03</p>
+						<div>
+							<div className="border-l-2 border-slate-500 pl-2">
+								<h2 className="mt-2 text-lg font-semibold">
+									Tokyo University of Agriculture and Technology
+								</h2>
+								<p className="text-slate-600">Bachelor of Engineering - BS, Computer Science</p>
+								<p className="text-blue-600">2026.04 - current</p>
+							</div>
+							<div className="border-l-2 border-slate-500 pl-2">
+								<h2 className="mt-2 text-lg font-semibold">
+									National Institute of Technology, Oita College
+								</h2>
+								<p className="text-slate-600">Associate Degree of Engineering, Computer Science</p>
+								<p className="text-blue-600">2021.04 - 2026.03</p>
+							</div>
 						</div>
+
 					</div>
 					<div>
 						<h1 className="text-3xl md:text-5xl inline-block font-bold text-left bg-linear-to-r from-gray-900 via-gray-600 to-gray-400 bg-clip-text text-transparent">
