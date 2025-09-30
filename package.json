@@ -18,10 +18,11 @@
     "@radix-ui/react-navigation-menu": "^1.2.14",
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.1.1",
-    "@react-three/drei": "^10.7.4",
+    "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
     "@tabler/icons-react": "^3.34.1",
     "@types/mdx": "^2.0.13",
+    "@types/three": "^0.180.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
@@ -34,11 +35,12 @@
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "react-icons": "^5.3.0",
-    "react-spring": "^10.0.1",
+    "react-spring": "^10.0.3",
     "shadcn": "^3.1.0",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.180.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
@@ -56,7 +58,12 @@
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "resolutions": {
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6"
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "@react-spring/zdog": "10.0.3",
+    "react-spring/@react-spring/zdog/react": "19.1.1",
+    "react-spring/@react-spring/zdog/react-dom": "19.1.1",
+    "stats-gl/three": "0.180.0",
+    "**/three": "0.180.0"
   }
 }
