@@ -35,7 +35,7 @@ const BlogHome = async () => {
 
 	return (
 		<main className="mt-4">
-			<h1 className="mt-4 text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
+			<h1 className="text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
 				Articles
 			</h1>
 			<Separator className="my-2" />
