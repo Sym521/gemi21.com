@@ -3,19 +3,17 @@ export const Greeting = () => {
 	return (
 		<div className="mt-6 space-y-2 mr-auto font-inter select-none">
 			<div className="flex text-6xl md:text-7xl lg:text-8xl font-bold">
-				<span className="bg-gradient-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
-					Hi there
-				</span>
+				<p className="text-blue-900">Hi there</p>
 				<p>👋</p>
 			</div>
-			<div className="text-base sm:text-xl md:text-2xl">
-				<p className="">My name is Esu! I&apos;m a CS student in japan!</p>
-				<div className="mt-2">
+			<div className="text-base sm:text-xl md:text-2xl space-y-2">
+				<p>I&apos;m Esuu, a Japanese student majoring in computer science.</p>
+				<div>
 					Currently I&apos;m crazy about...
 					<FlipWords
 						words={["Web design", "Playing game", "AI", "Future Core", "VR"]}
 						duration={1000}
-						className="font-extrabold"
+						className="font-extrabold text-blue-900"
 					></FlipWords>
 				</div>
 			</div>
