@@ -43,8 +43,8 @@ export const TopPageAboutMe = () => {
 				<Image
 					src="/images/trimmedTopLandscape.jpg"
 					alt="Japan"
-					width={300}
-					height={300}
+					width={400}
+					height={400}
 					className="opacity-95 pointer-events-none"
 				/>
 			),
@@ -55,7 +55,7 @@ export const TopPageAboutMe = () => {
 			description: "My favorite languages and tools",
 			className: "row-span-1 md:col-span-1 md:row-span-1",
 			background: (
-				<div className="overflow-hidden text-4xl space-y-8 p-4">
+				<div className="overflow-hidden text-5xl md:text-4xl space-y-8 p-6 flex flex-col justify-center h-full">
 					<div className="flex flex-row items-center space-x-2">
 						<SiTypescript className="text-zinc-800" />
 						<SiJavascript className="text-zinc-700" />

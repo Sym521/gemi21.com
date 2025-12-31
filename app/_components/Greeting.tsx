@@ -1,7 +1,7 @@
 import { FlipWords } from "@/app/_components/ui/flip-words";
 export const Greeting = () => {
 	return (
-		<div className="mt-6 space-y-2 mr-auto font-inter select-none">
+		<div className="space-y-2 font-inter select-none">
 			<div className="flex text-6xl md:text-7xl lg:text-8xl font-bold">
 				<p className="text-blue-900">Hi there</p>
 				<p>👋</p>
