@@ -9,20 +9,16 @@ export const Footer = () => {
 	return (
 		<div className="mt-auto h-auto py-4 space-y-4 bg-blue-700/10 backdrop-blur-sm shadow-sm rounded-xl">
 			<div className="px-6 space-x-2 flex items-center">
-				<FaSpotify className="w-6 h-6 text-zinc-600" />
+				<FaSpotify className="w-5 h-5 text-zinc-600" />
 				{track?.isPlaying ? (
 					<div>
-						<p className="text-zinc-700 font-semibold font-Noto_Sans_JP">
-							Now Playing
-						</p>
-						<p className="text-zinc-600 text-sm font-Noto_Sans_JP">
+						<p className="text-zinc-700 font-semibold">Now Playing</p>
+						<p className="text-zinc-700 text-sm">
 							{track.name} - {track.artist}
 						</p>
 					</div>
 				) : (
-					<p className="border-zinc-500 text-zinc-600 font-semibold font-Noto_Sans_JP">
-						Not Listening
-					</p>
+					<p className=" text-zinc-700 font-semibold">Not Listening</p>
 				)}
 			</div>
 			<div className="flex flex-col md:flex-row px-6 justify-between items-start md:items-center space-y-4 md:space-y-0">
