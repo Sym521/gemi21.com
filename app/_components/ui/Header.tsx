@@ -14,19 +14,19 @@ export const Header = () => {
 			<div className="flex space-x-4">
 				<Link
 					href="/About"
-					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-50"
+					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-25"
 				>
 					About
 				</Link>
 				<Link
 					href="/Blog"
-					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-50"
+					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-25"
 				>
 					Blog
 				</Link>
 				<Link
 					href="/"
-					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-50"
+					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-25"
 				>
 					🚧Works
 				</Link>
@@ -36,14 +36,14 @@ export const Header = () => {
 						<GitHubLogoIcon
 							width={25}
 							height={25}
-							className="transition ease-in-out delay-50 hover:text-zinc-700 hover:scale-110 "
+							className="transition ease-in-out delay-50 hover:text-zinc-700 hover:scale-110"
 						/>
 					</Link>
 					<Link href="https://x.com/esulikesbread">
 						<TwitterLogoIcon
 							width={25}
 							height={25}
-							className="transition ease-in-out delay-50 hover:text-sky-400 hover:scale-110 "
+							className="transition ease-in-out delay-50 hover:text-sky-400 hover:scale-110"
 						/>
 					</Link>
 				</div>

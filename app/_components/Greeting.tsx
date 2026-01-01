@@ -5,10 +5,7 @@ import fetcher from "@/lib/fetcher";
 
 export const Greeting = () => {
 	const { data: track } = useSWR("/api/spotify", fetcher);
-	const {
-		data: weather,
-		error: weatherError,
-	} = useSWR<{
+	const { data: weather, error: weatherError } = useSWR<{
 		city: string | null;
 		weather: string | null;
 		condition: string | null;

@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
 		if (!res.ok) {
 			return NextResponse.json(
 				{ error: "Failed to fetch weather data" },
-				{ status: res.status }
+				{ status: res.status },
 			);
 		}
 
@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
 	} catch (error) {
 		return NextResponse.json(
 			{ error: "Unexpected error while fetching weather data" },
-			{ status: 500 }
+			{ status: 500 },
 		);
 	}
 }
