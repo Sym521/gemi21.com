@@ -7,8 +7,8 @@ export default function BlogLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<div className="w-full h-fit bg-linear-to-tl from-indigo-100 from-0% via-red-50 via-50% to-stone-50 to-100% text-slate-800">
-			<main className="flex flex-col min-h-screen mx-auto max-w-5xl px-5 py-4 sm:px-8">
+		<div className="w-full h-fit bg-zinc-50 text-zinc-900 font-inter">
+			<main className="flex flex-col mx-auto min-h-dvh max-w-5xl px-5 py-4 sm:px-8 lg:max-w-7xl">
 				<Header />
 				<div className="mb-16">{children}</div>
 				<Footer />
