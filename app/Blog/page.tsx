@@ -35,7 +35,7 @@ const BlogHome = async () => {
 
 	return (
 		<main className="mt-4">
-			<h1 className="text-4xl md:text-7xl inline-block font-bold text-left bg-linear-to-r from-indigo-500 to-purple-400 bg-clip-text text-transparent">
+			<h1 className="text-5xl md:text-7xl inline-block font-bold text-left text-blue-900">
 				Articles
 			</h1>
 			<Separator className="my-2" />
@@ -44,13 +44,13 @@ const BlogHome = async () => {
 					{posts.map((post) => (
 						<li
 							key={post.slug}
-							className="mb-4 p-1 hover:border border-slate-300 delay-75 rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+							className="mb-4 p-1 hover:border border-slate-300 delay-75 rounded-md transition-transform duration-100 ease-in-out transform hover:scale-[1.02]"
 						>
 							<Link
 								href={`/Blog/${post.slug}`}
-								className="block p-1 font-noto_sans_jp"
+								className="block p-1 font-Noto_Sans_JP"
 							>
-								<h2 className="text-2xl font-bold text-blue-800">
+								<h2 className="text-2xl font-bold text-blue-600">
 									{post.title}
 								</h2>
 								<div>

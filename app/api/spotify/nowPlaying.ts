@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { getCurrentlyPlayingTrack } from "@/lib/spotify";
 /**
  * API route to get the currently playing track on Spotify.
