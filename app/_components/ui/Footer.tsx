@@ -45,7 +45,7 @@ export const Footer = () => {
 						href="/"
 						className="hover:text-zinc-900 transition-colors duration-200"
 					>
-						🚧Project
+						🚧Works
 					</Link>
 				</div>
 				<p className="text-zinc-500 text-sm">

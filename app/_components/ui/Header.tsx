@@ -28,7 +28,7 @@ export const Header = () => {
 					href="/"
 					className="hover:text-zinc-900 hover:bg-zinc-200 px-2 py-1 rounded-lg transition delay-50"
 				>
-					🚧Project
+					🚧Works
 				</Link>
 				<div className="hidden sm:inline-flex space-x-8 items-center">
 					<Separator orientation="vertical" />
