@@ -108,7 +108,21 @@ export default function About() {
 					<div className="mt-2 space-y-4">
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
-								href={"https://www.oita-ct.ac.jp/2025/11/05/20251104_ent-x/"}
+								href={"https://expo2025-jpaa.jp"}
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+							>
+								日本弁理士会 ビジネス/技術アイデアコンテスト2025
+							</Link>
+							<p className="text-sm text-zinc-600">2025.10 - 2026.03</p>
+							<p className="font-Noto_Sans_JP text-yellow-500">
+								🥇ビジネス賞 1位（近畿経済産業局長賞）
+							</p>
+						</div>
+						<div className="border-l-2 border-zinc-500 pl-2">
+							<Link
+								href={
+									"https://kosen-ent-x.jp/VxFGKgsi/YN-DIVxk#:~:text=%E5%89%B5%E3%82%8A%E3%81%BE%E3%81%99!-,%E5%A4%A7%E5%88%86%E9%AB%98%E5%B0%82%E3%80%8CNeurestX(%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%AC%E3%82%B9%E3%83%88%E3%82%A8%E3%83%83%E3%82%AF%E3%82%B9)%E3%80%8D,-%E2%96%A0%E3%83%81%E3%83%BC%E3%83%A0%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC"
+								}
 								className="text-lg font-semibold hover:underline"
 							>
 								Ent-X
@@ -121,13 +135,13 @@ export default function About() {
 								href={
 									"https://www.city.oita.oita.jp/o155/shigotosangyo/kigyoshien/wakate-2025/2025businessplan_result.html"
 								}
-								className="text-lg font-semibold hover:underline"
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
 							>
-								Oita City Student Business Plan Contest 2025
+								おおいた学生ビジネスプランコンテスト2025
 							</Link>
 							<p className="text-sm text-zinc-600">2025.12</p>
-							<p className="text-yellow-500">
-								🏆Grand Prize (contributed as an engineer)
+							<p className="font-Noto_Sans_JP text-yellow-500">
+								🏆最優秀賞（エンジニアとして参画）
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
@@ -135,23 +149,21 @@ export default function About() {
 								href={
 									"https://qshu-nbc.or.jp/2025/11/12/%E2%97%86%E2%97%87%E7%AC%AC25%E5%9B%9E%E4%B9%9D%E5%B7%9E%E3%83%BB%E5%A4%A7%E5%AD%A6%E7%99%BA%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%97-2/"
 								}
-								className="text-lg font-semibold hover:underline"
+								className="text-lg　font-Noto_Sans_JP font-semibold hover:underline"
 							>
-								The 25th Kyushu University-Originated Venture Business Plan
-								Contest
+								第25回 九州・大学発ベンチャー・ビジネスプランコンテスト
 							</Link>
 							<p className="text-sm text-zinc-600">2025.11</p>
-							<p className="text-yellow-500">
-								🏅Excellence Award & Saibu Gas Award (contributed as an
-								engineer)
+							<p className="font-Noto_Sans_JP text-yellow-500">
+								🏅優秀賞 & 西部ガス賞（エンジニアとして参画）
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://d-s-festival.jp"}
-								className="text-lg font-semibold hover:underline"
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
 							>
-								Digital Student Festival Award S×PARK
+								デジタル学園祭アワード S×PARK
 							</Link>
 							<p className="text-sm text-zinc-600">2025.07</p>
 							<p className="text-zinc-500">🥈2nd place & audience award</p>
