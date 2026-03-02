@@ -1,8 +1,13 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { Greeting } from "./_components/Greeting";
 import { Header } from "./_components/ui/Header";
-import PixelBlast from "./_components/ui/PixelBlast";
+
+const PixelBlast = dynamic(
+	() => import("./_components/ui/PixelBlast"),
+	{ ssr: false }
+);
 
 export default function Home() {
 	return (
