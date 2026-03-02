@@ -111,7 +111,7 @@ export default function About() {
 								href={
 									"https://kosen-ent-x.jp"
 								}
-								className="text-lg font-semibold hover:underline"
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
 							>
 								Ent-X | 地域DXエバンジェリスト創出プログラム
 							</Link>
