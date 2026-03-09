@@ -107,36 +107,27 @@ export default function About() {
 					</h1>
 					<div className="mt-2 space-y-4">
 						<div className="border-l-2 border-zinc-500 pl-2">
-							<h2 className="text-lg font-Noto_Sans_JP font-semibold">
-								ONE BEPPU DREAM AWARD -FINALIIST
-							</h2>
+							<Link
+								href={"https://onebeppudream.com"}
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+							>
+								ONE BEPPU DREAM AWARD 2025
+							</Link>
 							<p className="text-sm text-zinc-600">2026.02</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆26社からのサポート賞・オーディエンス賞
+							<p className="font-Noto_Sans_JP">
+								FINALIST, 26社からのサポート賞・オーディエンス賞
 							</p>
 						</div>
-						<div className="border-l-2 border-zinc-500 pl-2">
-							<h2 className="text-lg font-Noto_Sans_JP font-semibold">
-								不死鳥EXPO2025
-							</h2>
-							<p className="text-sm text-zinc-600">2026.01</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆グランプリ / uca賞 / JAPAN BDAA挑戦権
-							</p>
-						</div>
+
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
-								href={
-									"https://kosen-ent-x.jp"
-								}
+								href={"https://kosen-ent-x.jp"}
 								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
 							>
 								Ent-X | 地域DXエバンジェリスト創出プログラム
 							</Link>
 							<p className="text-sm text-zinc-600">2025.10 - 2026.02</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆Ent-X賞 受賞
-							</p>
+							<p className="font-Noto_Sans_JP text-amber-500">🏆Ent-X賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -152,6 +143,18 @@ export default function About() {
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
+								href={"https://phoenix-ignite.jp"}
+								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+							>
+								PhoeniX Ignite 不死鳥EXPO 2025
+							</Link>
+							<p className="text-sm text-zinc-600">2026.01</p>
+							<p className="font-Noto_Sans_JP text-amber-500">
+								🏆グランプリ & uca賞 & JAPAN BDAA挑戦権
+							</p>
+						</div>
+						<div className="border-l-2 border-zinc-500 pl-2">
+							<Link
 								href={
 									"https://www.city.oita.oita.jp/o155/shigotosangyo/kigyoshien/wakate-2025/2025businessplan_result.html"
 								}
@@ -160,9 +163,7 @@ export default function About() {
 								おおいた学生ビジネスプランコンテスト2025
 							</Link>
 							<p className="text-sm text-zinc-600">2025.12</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆最優秀賞
-							</p>
+							<p className="font-Noto_Sans_JP text-amber-500">🏆最優秀賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -177,6 +178,16 @@ export default function About() {
 							<p className="font-Noto_Sans_JP text-amber-500">
 								🏅優秀賞 & 西部ガスグループ賞
 							</p>
+						</div>
+						<div className="border-l-2 border-zinc-500 pl-2">
+							<Link
+								href={"https://kidou.site/kidou-global/"}
+								className="text-lg font-semibold hover:underline"
+							>
+								KIDOU Global Conference
+							</Link>
+							<p className="text-sm text-zinc-600">2025.09</p>
+							<p>Participated</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -210,9 +221,7 @@ export default function About() {
 								DCON 2024
 							</Link>
 							<p className="text-sm text-zinc-600">2024.05</p>
-							<p className="font-Noto_Sans_JP text-amber-700">
-								🥉総合 第3位
-							</p>
+							<p className="font-Noto_Sans_JP text-amber-700">🥉総合 第3位</p>
 						</div>
 					</div>
 				</div>
