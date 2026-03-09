@@ -107,6 +107,24 @@ export default function About() {
 					</h1>
 					<div className="mt-2 space-y-4">
 						<div className="border-l-2 border-zinc-500 pl-2">
+							<h2 className="text-lg font-Noto_Sans_JP font-semibold">
+								ONE BEPPU DREAM AWARD -FINALIIST
+							</h2>
+							<p className="text-sm text-zinc-600">2026.02</p>
+							<p className="font-Noto_Sans_JP text-amber-500">
+								🏆26社からのサポート賞・オーディエンス賞
+							</p>
+						</div>
+						<div className="border-l-2 border-zinc-500 pl-2">
+							<h2 className="text-lg font-Noto_Sans_JP font-semibold">
+								不死鳥EXPO2025
+							</h2>
+							<p className="text-sm text-zinc-600">2026.01</p>
+							<p className="font-Noto_Sans_JP text-amber-500">
+								🏆グランプリ / uca賞 / JAPAN BDAA挑戦権
+							</p>
+						</div>
+						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={
 									"https://kosen-ent-x.jp"
@@ -143,7 +161,7 @@ export default function About() {
 							</Link>
 							<p className="text-sm text-zinc-600">2025.12</p>
 							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆最優秀賞（エンジニアとして参画）
+								🏆最優秀賞
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
@@ -157,7 +175,7 @@ export default function About() {
 							</Link>
 							<p className="text-sm text-zinc-600">2025.11</p>
 							<p className="font-Noto_Sans_JP text-amber-500">
-								🏅優秀賞 & 西部ガス賞（エンジニアとして参画）
+								🏅優秀賞 & 西部ガスグループ賞
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
