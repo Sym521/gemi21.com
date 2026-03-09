@@ -143,7 +143,7 @@ export default function About() {
 							</Link>
 							<p className="text-sm text-zinc-600">2025.12</p>
 							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆最優秀賞（エンジニアとして参画）
+								🏆最優秀賞
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
@@ -157,7 +157,7 @@ export default function About() {
 							</Link>
 							<p className="text-sm text-zinc-600">2025.11</p>
 							<p className="font-Noto_Sans_JP text-amber-500">
-								🏅優秀賞 & 西部ガス賞（エンジニアとして参画）
+								🏅優秀賞 & 西部ガスグループ賞
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
