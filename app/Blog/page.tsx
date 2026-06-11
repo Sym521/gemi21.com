@@ -1,5 +1,5 @@
-import path from "path";
 import Link from "next/link";
+import { postData as tuatEntranceExamPostData } from "../../post/tuatEntranceExam.mdx";
 import { Separator } from "../_components/ui/separator";
 
 type Post = {
@@ -9,30 +9,14 @@ type Post = {
 	date: string;
 };
 
-const getPosts = async (): Promise<Post[]> => {
-	const postsDirectory = path.join(process.cwd(), "post");
-	const filenames = (await import("fs/promises")).readdir(postsDirectory);
+const posts: Post[] = [
+	{
+		slug: "tuatEntranceExam",
+		...tuatEntranceExamPostData,
+	},
+];
 
-	const posts = (await filenames).filter((filename) =>
-		filename.endsWith(".mdx"),
-	);
-
-	const postDataList = await Promise.all(
-		posts.map(async (filename) => {
-			const slug = path.basename(filename, ".mdx");
-			// 動的importでmdxファイルからpostDataを取得
-			const mod = await import(`../../post/${slug}.mdx`);
-			const { title, description, date } = mod.postData;
-			return { slug, title, description, date };
-		}),
-	);
-
-	return postDataList;
-};
-
-const BlogHome = async () => {
-	const posts = await getPosts();
-
+const BlogHome = () => {
 	return (
 		<main className="mt-4">
 			<h1 className="text-5xl md:text-7xl inline-block font-bold text-left text-blue-900">
