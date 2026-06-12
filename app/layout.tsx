@@ -42,7 +42,7 @@ export default function RootLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<html>
+		<html lang="ja">
 			<body
 				className={`${inter.className} ${oswald.variable} ${poppins.variable} ${noto_sans_jp.variable} ${zen_kaku_gothic_new.variable}  bg-zinc-50 text-zinc-900`}
 			>

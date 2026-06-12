@@ -108,17 +108,13 @@ export default function About() {
 					<div className="mt-2 space-y-4">
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
-								href={
-									"https://kosen-ent-x.jp"
-								}
+								href={"https://kosen-ent-x.jp"}
 								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
 							>
 								Ent-X | 地域DXエバンジェリスト創出プログラム
 							</Link>
 							<p className="text-sm text-zinc-600">2025.10 - 2026.02</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏆Ent-X賞 受賞
-							</p>
+							<p className="font-Noto_Sans_JP text-amber-500">🏆Ent-X賞 受賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -192,9 +188,7 @@ export default function About() {
 								DCON 2024
 							</Link>
 							<p className="text-sm text-zinc-600">2024.05</p>
-							<p className="font-Noto_Sans_JP text-amber-700">
-								🥉総合 第3位
-							</p>
+							<p className="font-Noto_Sans_JP text-amber-700">🥉総合 第3位</p>
 						</div>
 					</div>
 				</div>
