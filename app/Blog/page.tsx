@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { postData as tuatEntranceExamPostData } from "../../post/tuatEntranceExam.mdx";
 import { Separator } from "../_components/ui/separator";
 
 type Post = {
@@ -9,12 +8,32 @@ type Post = {
 	date: string;
 };
 
-const posts: Post[] = [
-	{
-		slug: "tuatEntranceExam",
-		...tuatEntranceExamPostData,
-	},
-];
+type PostModule = {
+	postData: Omit<Post, "slug">;
+};
+
+type PostContext = {
+	keys: () => string[];
+	(key: string): PostModule;
+};
+
+const postContext = (
+	require as typeof require & {
+		context: (
+			directory: string,
+			useSubdirectories: boolean,
+			regExp: RegExp,
+		) => PostContext;
+	}
+).context("../../post", false, /\.mdx$/);
+
+const posts: Post[] = postContext
+	.keys()
+	.map((fileName) => ({
+		slug: fileName.replace(/^\.\//, "").replace(/\.mdx$/, ""),
+		...postContext(fileName).postData,
+	}))
+	.sort((a, b) => b.date.localeCompare(a.date));
 
 const BlogHome = () => {
 	return (
