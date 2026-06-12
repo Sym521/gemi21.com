@@ -1,5 +1,18 @@
 import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
+import { CodeBlock } from '@/components/ui/code-block';
+
+function getCodeBlockProps(children: any) {
+    const codeElement = Array.isArray(children) ? children[0] : children;
+    const code = codeElement?.props?.children;
+    const className = codeElement?.props?.className ?? '';
+    const language = className.replace('language-', '') || undefined;
+
+    return {
+        code: typeof code === 'string' ? code : String(code ?? ''),
+        language,
+    };
+}
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
@@ -45,6 +58,36 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
                 {...props}
             />
         ),
+        pre: ({ children, ...props }: any) => {
+            const { code, language } = getCodeBlockProps(children);
+
+            return (
+                <CodeBlock
+                    code={code}
+                    language={language}
+                    className={props.className}
+                />
+            );
+        },
+        code: ({ children, className, ...props }: any) => {
+            if (className?.startsWith('language-')) {
+                return (
+                    <code className={className} {...props}>
+                        {children}
+                    </code>
+                );
+            }
+
+            return (
+                <code
+                    className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-sm text-slate-800"
+                    {...props}
+                >
+                    {children}
+                </code>
+            );
+        },
+        CodeBlock,
         
         ...components,
     };
