@@ -52,7 +52,7 @@ export default function About() {
 									href={"https://vercel.com"}
 									className="text-blue-600 hover:text-zinc-800 transition-colors duration-300"
 								>
-									Vercel
+									Cloudflare Workers
 								</Link>
 							</span>
 							<span className="flex gap-1">

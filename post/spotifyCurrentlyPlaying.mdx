@@ -1,0 +1,281 @@
+export const postData = {
+    title: "Spotify APIをNext.js + Cloudflareで動かす",
+    description: "Spotifyの現在再生中の曲をブログに表示するための実装メモ",
+    date: "2026/06/10",
+};
+
+<div className="mb-4 space-y-2 font-inter text-slate-800">
+    <a href="/Blog" className="md:text-lg text-blue-600 hover:underline">{"<"} Back to list</a>
+    <h1 className="text-2xl md:text-3xl font-semibold text-left">
+        {postData.title}
+    </h1>
+    <p className="text-left">
+        {postData.date} - {postData.description}
+    </p>
+</div>
+
+![EntranceGate](/images/spotifyThumbnail.jpg "Playing music on spotify")
+
+<br />
+
+自身の備忘録も兼ねて，Spotifyの「現在再生中の曲」を表示するAPIの実装方法をまとめます．
+Next.jsをOpenNext経由でCloudflareにデプロイしている環境で，Spotify APIのrefresh tokenを使って再生中の曲名とアーティスト名を返す構成です．
+
+# 実装の概要
+今回作ったAPIは，Spotifyで曲を再生しているときに曲名とアーティスト名を返し，再生していないときは空の状態を返すものです．
+このサイトのトップページとFooterで使用しています．
+
+```spotify.ts
+const clientId = process.env.SPOTIFY_CLIENT_ID;
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+
+async function getAccessToken() {
+    if (!refresh_token) {
+        throw new Error("SPOTIFY_REFRESH_TOKEN is not defined");
+    }
+
+    const tokenResponse = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: {
+            Authorization: `Basic ${Buffer.from(
+                `${clientId}:${clientSecret}`
+            ).toString("base64")}`,
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+            grant_type: "refresh_token",
+            refresh_token: refresh_token!,
+        }),
+    });
+    return tokenResponse.json();
+};
+
+
+export async function getCurrentlyPlayingTrack() {
+    try {
+        const tokenData = await getAccessToken();
+        const accessToken = tokenData.access_token;
+
+        if (!accessToken) {
+            throw new Error("Failed to get access token");
+        }
+
+        const response = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
+            headers: {
+                "Authorization": `Bearer ${accessToken}`,
+            },
+        });
+
+        if (response.status === 204) {
+            // 何も再生していない場合
+            return null;
+        }
+
+        if (!response.ok) {
+            throw new Error(`Spotify API error: ${response.status}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching currently playing track:", error);
+        return null;
+    }
+}
+```
+
+レスポンスは以下のような形にしています．
+
+```json
+{
+  "isPlaying": true,
+  "name": "Song name",
+  "artist": "Artist name"
+}
+```
+
+再生中でない場合は以下のように返します．
+
+```json
+{
+  "isPlaying": false,
+  "name": "",
+  "artist": ""
+}
+```
+
+
+# 環境について
+私の環境ではNext.jsを使っており，CloudflareにはOpenNextでデプロイしています．
+
+- Deploy: Cloudflare
+- Framework: Next.js
+- Adapter: OpenNext
+
+Cloudflare Workers上では，ローカルの`.env`ではなくCloudflare側に登録したSecretsを実行時に読む必要があります．そのため，Spotify関連の値はすべてCloudflareのRuntime Secretとして登録しました．
+
+# 必要なSecrets
+Cloudflare Workersの対象プロジェクトに，以下の値を登録します．
+
+<CodeBlock
+    language="Secrets"
+    code={`SPOTIFY_CLIENT_ID
+SPOTIFY_CLIENT_SECRET
+SPOTIFY_REFRESH_TOKEN`}
+/>
+
+場所は以下の通りです．
+
+Cloudflare Dashboard
+→ Workers & Pages
+→ "プロジェクト名"
+→ Settings
+→ Variables and Secrets
+
+
+`SPOTIFY_CLIENT_ID`と`SPOTIFY_CLIENT_SECRET`はSpotify Developer Dashboardで作成したアプリの値です．
+`SPOTIFY_REFRESH_TOKEN`は後述する認可フローで取得します．
+
+# Spotify側の準備
+まず，<a href='https://developer.spotify.com/dashboard' className='text-blue-600 hover:underline'>Spotify Developer Dashboard</a>でアプリを作成します．
+作成したアプリのRedirect URIには，認可コードを受け取るためのURIを登録します．
+
+<CodeBlock
+    language="example"
+    code={`http://127.0.0.1:3000/callback`}
+/>
+
+Development modeの場合は，実際に使うSpotifyアカウントを<span className='text-rose-600'>Users and Access</span>に追加しておきます．これを忘れると，自分のアカウントで認可できないことがあります．
+
+必要なscopeは以下です．
+
+<CodeBlock
+    language="必要なscopes"
+    code={`user-read-currently-playing user-read-playback-state`}
+/>
+
+# Refresh Tokenの取得
+Spotify APIを継続的に使うためには，最初にauthorization codeを取得し，それを使ってrefresh tokenを取得します．
+詳細は<a href='https://developer.spotify.com/documentation/web-api/tutorials/refreshing-tokens' className='text-blue-600 hover:underline'>公式ドキュメント</a>を確認してください．
+
+## Authorization Codeの取得
+WindowsならPowerShellで以下を実行して，Spotifyの認可URLを作成します．
+
+```powershell
+$CLIENT_ID = "SpotifyのClient ID"
+$REDIRECT_URI = "http://127.0.0.1:3000/callback"
+$SCOPE = "user-read-currently-playing user-read-playback-state"
+$STATE = [guid]::NewGuid().ToString("N")
+
+$authUrl = "https://accounts.spotify.com/authorize" +
+  "?client_id=$([uri]::EscapeDataString($CLIENT_ID))" +
+  "&response_type=code" +
+  "&redirect_uri=$([uri]::EscapeDataString($REDIRECT_URI))" +
+  "&scope=$([uri]::EscapeDataString($SCOPE))" +
+  "&state=$STATE" +
+  "&show_dialog=true"
+
+Start-Process $authUrl
+```
+
+ブラウザで許可すると，最終的に以下のようなURLに遷移します．
+
+<CodeBlock
+    language="txt"
+    code={`http://127.0.0.1:3000/callback?code=xxxxx&state=yyyyy`}
+/>
+
+ここで`127.0.0.1 で接続が拒否されました`と表示されても問題ありません．ローカルサーバーを立てていないため正常です．
+コピーするのは<span className='text-rose-600'>code=の後ろだけ</span>です．`&state=...`は含めません．
+
+## Token交換
+取得したcodeを使ってrefresh tokenを取得します．
+codeは一度しか使えないので，失敗した場合は新しいcodeを取り直します．
+
+```powershell
+$CLIENT_ID = "SpotifyのClient ID"
+$CLIENT_SECRET = "SpotifyのClient Secret"
+$REDIRECT_URI = "http://127.0.0.1:3000/callback"
+$CODE = "取得したcodeだけ"
+
+$basic = [Convert]::ToBase64String(
+  [Text.Encoding]::UTF8.GetBytes("${CLIENT_ID}:${CLIENT_SECRET}")
+)
+
+$body = "grant_type=authorization_code" +
+  "&code=$([uri]::EscapeDataString($CODE.Trim()))" +
+  "&redirect_uri=$([uri]::EscapeDataString($REDIRECT_URI))"
+
+$response = Invoke-RestMethod `
+  -Method Post `
+  -Uri "https://accounts.spotify.com/api/token" `
+  -Headers @{ Authorization = "Basic $basic" } `
+  -ContentType "application/x-www-form-urlencoded" `
+  -Body $body
+
+$response.refresh_token
+```
+
+表示された値を`SPOTIFY_REFRESH_TOKEN`としてCloudflare Secretに登録します．
+
+# Cloudflare Secretsの登録
+ここまでで取得できたSecretをWrangler CLIかCloudflareのDashboardから登録します．<span className='text-rose-600'>ローカルの`.env`ではなく本番環境にSecretが入っていること</span>を確認してください．
+
+
+# 動作確認
+Spotifyで曲を再生した状態で，以下のURLを開きます．
+
+<CodeBlock
+    language="txt"
+    code={`https://xxx.com/api/spotify`}
+/>
+
+成功していれば，`isPlaying`が`true`になり，曲名とアーティスト名が返ってきます．
+
+Cloudflare上でエラーが出る場合は，`wrangler tail`でログを確認します．
+
+```powershell
+npx wrangler tail <project-name>
+```
+
+ログを見ながら`/api/spotify`にアクセスすると，Secretが読めていないのか，Spotify側のtokenが無効なのかが分かりやすいです．
+
+# よくあるエラー
+
+## `SPOTIFY_REFRESH_TOKEN is not defined`
+CloudflareのRuntime Secretに`SPOTIFY_REFRESH_TOKEN`が登録されていない，または本番環境に反映されていない
+
+ローカルの`.env`だけに値を入れていても，Cloudflare上では読めません．対象のWorkerにSecretが入っているか確認しましょう．
+
+## `invalid_client`
+`SPOTIFY_CLIENT_ID`または`SPOTIFY_CLIENT_SECRET`が間違っています．
+別のSpotifyアプリのClient IDとClient Secretを混ぜている場合にも起きます．
+
+## `invalid_grant: Invalid authorization code`
+authorization codeが無効です．
+
+主な原因は以下です．
+
+- codeを一度使った
+- 古いcodeを使った
+- `code=`や`&state=...`まで含めて貼った
+- 認可URLとtoken交換時の`redirect_uri`が一致していない
+
+対処としては，新しいcodeを取り直して，すぐに一度だけ使います．
+
+## `invalid_grant: Invalid refresh token`
+Cloudflareに登録されている`SPOTIFY_REFRESH_TOKEN`が無効です．
+
+主な原因は以下です．
+
+- 別のSpotifyアプリ由来のrefresh tokenを使っている
+- Client Secretを再生成した
+- Spotifyアカウント側でアプリ連携を解除した
+- 古いrefresh tokenを登録している
+
+この場合は，新しいauthorization codeからrefresh tokenを取得し直し，Cloudflare Secretを上書きします．
+
+# まとめ
+2026/6/11 までこのWebサイトはVercelにデプロイしていましたが，Cloudflare Workersに移行するにあたって，新しくSPOTIFY_REFRESH_TOKENを取得するのに苦労してしまったので備忘録として残しておきます．
+
+このプロジェクトでは，API実行時に`process.env`からSecretを読み，Spotify APIに問い合わせる形にしています．同じようにCloudflare + OpenNextで動かす場合の参考になれば嬉しいです．
