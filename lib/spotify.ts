@@ -1,9 +1,17 @@
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
-
 async function getAccessToken() {
-    if (!refresh_token) {
+    const clientId = process.env.SPOTIFY_CLIENT_ID;
+    const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+    const refreshToken = process.env.SPOTIFY_REFRESH_TOKEN;
+
+    if (!clientId) {
+        throw new Error("SPOTIFY_CLIENT_ID is not defined");
+    }
+
+    if (!clientSecret) {
+        throw new Error("SPOTIFY_CLIENT_SECRET is not defined");
+    }
+
+    if (!refreshToken) {
         throw new Error("SPOTIFY_REFRESH_TOKEN is not defined");
     }
 
@@ -17,9 +25,15 @@ async function getAccessToken() {
         },
         body: new URLSearchParams({
             grant_type: "refresh_token",
-            refresh_token: refresh_token!,
+            refresh_token: refreshToken,
         }),
     });
+
+    if (!tokenResponse.ok) {
+        const errorText = await tokenResponse.text();
+        throw new Error(`Spotify token API error: ${tokenResponse.status} ${errorText}`);
+    }
+
     return tokenResponse.json();
 };
 
