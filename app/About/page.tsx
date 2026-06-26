@@ -49,10 +49,10 @@ export default function About() {
 							<span className="flex gap-1">
 								<p>Deployment:</p>
 								<Link
-									href={"https://vercel.com"}
+									href={"https://www.cloudflare.com/"}
 									className="text-blue-600 hover:text-zinc-800 transition-colors duration-300"
 								>
-									Cloudflare Workers
+									Cloudflare
 								</Link>
 							</span>
 							<span className="flex gap-1">
