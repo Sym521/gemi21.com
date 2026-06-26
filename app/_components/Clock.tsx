@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 export const Clock = () => {
 	const [time, setTime] = useState<string>(moment().format("LTS"));
 	useEffect(() => {
-		const timeoutID = setTimeout(() => {
+		const intervalID = setInterval(() => {
 			setTime(moment().format("LTS"));
 		}, 1000);
 		return () => {
-			clearTimeout(timeoutID);
+			clearInterval(intervalID);
 		};
-	}, [time]);
+	}, []);
 	return <p>{time}</p>;
 };

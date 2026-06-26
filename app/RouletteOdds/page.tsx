@@ -66,9 +66,9 @@ export default function RouletteOdds() {
 				</h2>
 				<ul>
 					{winningBets.length > 0 ? (
-						winningBets.map((bet, index) => (
+						winningBets.map((bet) => (
 							<li
-								key={index}
+								key={bet.bet}
 								className="flex items-center justify-center text-xl"
 							>
 								{bet.bet}: {bet.multiplier}倍

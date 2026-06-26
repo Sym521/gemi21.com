@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
 		};
 
 		return NextResponse.json(payload, { status: 200 });
-	} catch (error) {
+	} catch {
 		return NextResponse.json(
 			{ error: "Unexpected error while fetching weather data" },
 			{ status: 500 },

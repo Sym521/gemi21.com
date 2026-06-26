@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getCurrentlyPlayingTrack } from "@/lib/spotify";
+
+type SpotifyArtist = {
+	name: string;
+};
 /**
  * API route to get the currently playing track on Spotify.
  * Returns track details if a song is currently playing, otherwise returns isPlaying: false.
@@ -27,7 +31,7 @@ export default async function handler(
 	const isPlaying = song.is_playing;
 	const title = song.item.name;
 	const artist = song.item.artists
-		.map((_artist: any) => _artist.name)
+		.map((_artist: SpotifyArtist) => _artist.name)
 		.join(", ");
 	const album = song.item.album.name;
 	const albumImageUrl = song.item.album.images[0].url;

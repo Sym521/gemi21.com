@@ -464,7 +464,9 @@ const PixelBlast = ({
 				const noisePass = new EffectPass(camera, noiseEffect);
 				noisePass.renderToScreen = true;
 				if (composer && composer.passes.length > 0)
-					composer.passes.forEach((p) => (p.renderToScreen = false));
+					composer.passes.forEach((p) => {
+						p.renderToScreen = false;
+					});
 				composer.addPass(noisePass);
 			}
 			if (composer)
@@ -607,6 +609,7 @@ const PixelBlast = ({
 			ref={containerRef}
 			className={`pixel-blast-container ${className ?? ""}`}
 			style={style}
+			role="img"
 			aria-label="PixelBlast interactive background"
 		/>
 	);
