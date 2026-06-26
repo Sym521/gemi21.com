@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { getCurrentlyPlayingTrack } from "@/lib/spotify";
 
+type SpotifyArtist = {
+	name: string;
+};
+
 export async function GET() {
 	try {
 		const track = await getCurrentlyPlayingTrack();
@@ -18,7 +22,9 @@ export async function GET() {
 		return NextResponse.json({
 			isPlaying: track.is_playing,
 			name: track.item.name,
-			artist: track.item.artists.map((artist: any) => artist.name).join(", "),
+			artist: track.item.artists
+				.map((artist: SpotifyArtist) => artist.name)
+				.join(", "),
 		});
 	} catch (error) {
 		// error handling

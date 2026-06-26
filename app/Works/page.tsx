@@ -1,6 +1,5 @@
 import { Footer } from "../_components/ui/Footer";
 import { Header } from "../_components/ui/Header";
-import Link from "next/link";
 
 export default function Works() {
 	return (

@@ -1,7 +1,41 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
+import { useCallback, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+
+type WordSegment = {
+	key: string;
+	word: string;
+	delayIndex: number;
+	letters: Array<{
+		key: string;
+		letter: string;
+		delayIndex: number;
+	}>;
+};
+
+const getWordSegments = (currentWord: string) => {
+	const segments: WordSegment[] = [];
+	let offset = 0;
+
+	for (const word of currentWord.split(" ")) {
+		const startIndex = offset;
+
+		segments.push({
+			key: `${startIndex}-${word}`,
+			word,
+			delayIndex: segments.length,
+			letters: Array.from(word).map((letter, letterIndex) => ({
+				key: `${startIndex + letterIndex}-${letter}`,
+				letter,
+				delayIndex: letterIndex,
+			})),
+		});
+		offset += word.length + 1;
+	}
+
+	return segments;
+};
 
 export const FlipWords = ({
 	words,
@@ -14,6 +48,7 @@ export const FlipWords = ({
 }) => {
 	const [currentWord, setCurrentWord] = useState(words[0]);
 	const [isAnimating, setIsAnimating] = useState<boolean>(false);
+	const wordSegments = getWordSegments(currentWord);
 
 	// thanks for the fix Julian - https://github.com/Julian-AT
 	const startAnimation = useCallback(() => {
@@ -64,29 +99,29 @@ export const FlipWords = ({
 				key={currentWord}
 			>
 				{/* edit suggested by Sajal: https://x.com/DewanganSajal */}
-				{currentWord.split(" ").map((word, wordIndex) => (
+				{wordSegments.map((segment) => (
 					<motion.span
-						key={word + wordIndex}
+						key={segment.key}
 						initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
 						animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 						transition={{
-							delay: wordIndex * 0.3,
+							delay: segment.delayIndex * 0.3,
 							duration: 0.3,
 						}}
 						className="inline-block whitespace-nowrap"
 					>
-						{word.split("").map((letter, letterIndex) => (
+						{segment.letters.map((letter) => (
 							<motion.span
-								key={word + letterIndex}
+								key={letter.key}
 								initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
 								animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
 								transition={{
-									delay: wordIndex * 0.3 + letterIndex * 0.05,
+									delay: segment.delayIndex * 0.3 + letter.delayIndex * 0.05,
 									duration: 0.2,
 								}}
 								className="inline-block"
 							>
-								{letter}
+								{letter.letter}
 							</motion.span>
 						))}
 						<span className="inline-block">&nbsp;</span>
