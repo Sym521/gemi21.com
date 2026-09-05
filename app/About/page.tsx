@@ -109,47 +109,45 @@ export default function About() {
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://onebeppudream.com"}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								ONE BEPPU DREAM AWARD 2025
 							</Link>
 							<p className="text-sm text-zinc-600">2026.02</p>
-							<p className="font-Noto_Sans_JP">
-								FINALIST, 26社からのサポート賞・オーディエンス賞
-							</p>
+							<p>FINALIST, 26社からのサポート賞・オーディエンス賞</p>
 						</div>
 
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://kosen-ent-x.jp"}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								Ent-X | 地域DXエバンジェリスト創出プログラム
 							</Link>
 							<p className="text-sm text-zinc-600">2025.10 - 2026.02</p>
-							<p className="font-Noto_Sans_JP text-amber-500">🏆Ent-X賞</p>
+							<p className="text-amber-500">🏆Ent-X賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://expo2025-jpaa.jp"}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								日本弁理士会 ビジネス/技術アイデアコンテスト
 							</Link>
 							<p className="text-sm text-zinc-600">2025.08 - 2026.02</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
+							<p className="text-amber-500">
 								🥇ビジネス賞 1位（近畿経済産業局長賞）
 							</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://phoenix-ignite.jp"}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								PhoeniX Ignite 不死鳥EXPO 2025
 							</Link>
 							<p className="text-sm text-zinc-600">2026.01</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
+							<p className="text-amber-500">
 								🏆グランプリ & uca賞 & JAPAN BDAA挑戦権
 							</p>
 						</div>
@@ -158,26 +156,24 @@ export default function About() {
 								href={
 									"https://www.city.oita.oita.jp/o155/shigotosangyo/kigyoshien/wakate-2025/2025businessplan_result.html"
 								}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								おおいた学生ビジネスプランコンテスト2025
 							</Link>
 							<p className="text-sm text-zinc-600">2025.12</p>
-							<p className="font-Noto_Sans_JP text-amber-500">🏆最優秀賞</p>
+							<p className="text-amber-500">🏆最優秀賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={
 									"https://qshu-nbc.or.jp/2025/11/12/%E2%97%86%E2%97%87%E7%AC%AC25%E5%9B%9E%E4%B9%9D%E5%B7%9E%E3%83%BB%E5%A4%A7%E5%AD%A6%E7%99%BA%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%BB%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%97-2/"
 								}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								第25回 九州・大学発ベンチャー・ビジネスプランコンテスト
 							</Link>
 							<p className="text-sm text-zinc-600">2025.11</p>
-							<p className="font-Noto_Sans_JP text-amber-500">
-								🏅優秀賞 & 西部ガスグループ賞
-							</p>
+							<p className="text-amber-500">🏅優秀賞 & 西部ガスグループ賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -192,14 +188,12 @@ export default function About() {
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
 								href={"https://d-s-festival.jp"}
-								className="text-lg font-Noto_Sans_JP font-semibold hover:underline"
+								className="text-lg font-semibold hover:underline"
 							>
 								デジタル学園祭アワード S×PARK
 							</Link>
 							<p className="text-sm text-zinc-600">2025.07</p>
-							<p className="font-Noto_Sans_JP text-zinc-500">
-								🥈準グランプリ & 特別賞
-							</p>
+							<p className="text-zinc-500">🥈準グランプリ & 特別賞</p>
 						</div>
 						<div className="border-l-2 border-zinc-500 pl-2">
 							<Link
@@ -221,7 +215,7 @@ export default function About() {
 								DCON 2024
 							</Link>
 							<p className="text-sm text-zinc-600">2024.05</p>
-							<p className="font-Noto_Sans_JP text-amber-700">🥉総合 第3位</p>
+							<p className="text-amber-700">🥉総合 第3位</p>
 						</div>
 					</div>
 				</div>
@@ -229,6 +223,18 @@ export default function About() {
 					<h1 className="text-4xl md:text-5xl inline-block font-bold text-left">
 						Experience
 					</h1>
+					<div className="border-l-2 border-zinc-500 pl-2">
+						<h2 className="mt-2 text-lg font-semibold">
+							Software Engineer (Intern)
+						</h2>
+						<span>
+							<p>株式会社アイスタイル</p>
+							<p className="text-blue-600">2026.08 - 2026.09</p>
+						</span>
+						<div className="flex gap-2 mt-1">
+							<SiJavascript style={{ width: 25, height: 25 }} />
+						</div>
+					</div>
 					<div className="border-l-2 border-zinc-500 pl-2">
 						<h2 className="mt-2 text-lg font-semibold">
 							Software Engineer (Intern)

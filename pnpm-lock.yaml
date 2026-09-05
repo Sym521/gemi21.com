@@ -87,6 +87,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      gen-interface-jp:
+        specifier: ^0.8.0
+        version: 0.8.0
       moment:
         specifier: ^2.30.1
         version: 2.30.1
@@ -2783,6 +2786,9 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  gen-interface-jp@0.8.0:
+    resolution: {integrity: sha512-7rIytSAfuugVjYithrQseT0zqeUIkJd0LY3Ugdfbk/FxzMSeagcskeZlof5uWJ5liW3Zhn7pdLHq2OIvAftx+A==}
 
   generator-function@2.0.1:
     resolution: {integrity: sha512-SFdFmIJi+ybC0vjlHN0ZGVGHc3lgE0DxPAT0djjVg+kjOnSqclqmj0KQ7ykTOLP6YxoqOvuAODGdcHJn+43q3g==}
@@ -7352,6 +7358,8 @@ snapshots:
       is-document.all: 1.0.0
 
   functions-have-names@1.2.3: {}
+
+  gen-interface-jp@0.8.0: {}
 
   generator-function@2.0.1: {}
 
