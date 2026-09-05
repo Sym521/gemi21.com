@@ -1,7 +1,16 @@
 import Link from "next/link";
-import { FaPython, FaReact } from "react-icons/fa6";
+import { FaAws, FaPython, FaReact } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SiFastapi, SiJavascript, SiTypescript } from "react-icons/si";
+import {
+	SiDocker,
+	SiFastapi,
+	SiGooglecloud,
+	SiJavascript,
+	SiLaravel,
+	SiPhp,
+	SiTypescript,
+	SiVuedotjs,
+} from "react-icons/si";
 import { Separator } from "../_components/ui/separator";
 import { SkillsMarquee } from "../_components/ui/skillsMarquee";
 
@@ -15,8 +24,7 @@ export default function About() {
 				<span className="max-w-[90%] text-left">
 					<p>My name is Esuu. I am currently a CS student in Japan.</p>
 					<p>
-						I am curious about web designing, artificial intelligence, and
-						virtual reality.
+						I am curious about web designing and HCI.
 					</p>
 					<p className="flex gap-1 items-center">
 						My favorite framework is Next.js
@@ -225,6 +233,22 @@ export default function About() {
 					</h1>
 					<div className="border-l-2 border-zinc-500 pl-2">
 						<h2 className="mt-2 text-lg font-semibold">
+							Short-term Internship (3 days)
+						</h2>
+						<span>
+							<p>株式会社日本経済新聞社</p>
+							<p className="text-blue-600">2026.09</p>
+						</span>
+						<div className="flex gap-2 mt-1">
+							<SiTypescript style={{ width: 25, height: 25 }} />
+							<FaReact style={{ width: 25, height: 25 }} />
+							<RiNextjsFill style={{ width: 25, height: 25 }} />
+							<RiTailwindCssFill style={{ width: 25, height: 25 }} />
+							<SiGooglecloud style={{ width: 25, height: 25 }} />
+						</div>
+					</div>
+					<div className="border-l-2 border-zinc-500 pl-2">
+						<h2 className="mt-2 text-lg font-semibold">
 							Software Engineer (Intern)
 						</h2>
 						<span>
@@ -232,7 +256,12 @@ export default function About() {
 							<p className="text-blue-600">2026.08 - 2026.09</p>
 						</span>
 						<div className="flex gap-2 mt-1">
-							<SiJavascript style={{ width: 25, height: 25 }} />
+							<SiDocker style={{ width: 25, height: 25 }} />
+							<FaAws style={{ width: 25, height: 25 }} />
+							<SiPhp style={{ width: 25, height: 25 }} />
+							<SiLaravel style={{ width: 25, height: 25 }} />
+							<SiTypescript style={{ width: 25, height: 25 }} />
+							<SiVuedotjs style={{ width: 25, height: 25 }} />
 						</div>
 					</div>
 					<div className="border-l-2 border-zinc-500 pl-2">

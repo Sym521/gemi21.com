@@ -1,11 +1,12 @@
 "use client";
 
-import { FaPython, FaReact, FaUnity } from "react-icons/fa";
+import { FaAws, FaPython, FaReact, FaUnity } from "react-icons/fa";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
 	SiAstro,
 	SiBiome,
 	SiCplusplus,
+	SiDocker,
 	SiFastapi,
 	SiFigma,
 	SiJavascript,
@@ -17,7 +18,7 @@ import { Marquee } from "../marquee";
 
 export const SkillsMarquee = () => {
 	return (
-		<div className="relative flex h-[100px]  flex-col items-center justify-center overflow-hidden">
+		<div className="relative flex h-25 flex-col items-center justify-center overflow-hidden">
 			<Marquee className="[--duration:15s]">
 				<SiTypescript style={{ width: 60, height: 60, color: "#27272A" }} />
 				<SiJavascript style={{ width: 60, height: 60, color: "#27272A" }} />
@@ -26,10 +27,8 @@ export const SkillsMarquee = () => {
 					style={{ width: 60, height: 60, color: "#27272A" }}
 				/>
 				<FaReact style={{ width: 60, height: 60, color: "#27272A" }} />
-
 				<FaPython style={{ width: 60, height: 60, color: "#27272A" }} />
 				<SiFastapi style={{ width: 60, height: 60, color: "#27272A" }} />
-
 				<SiTensorflow style={{ width: 60, height: 60, color: "#27272A" }} />
 				<FaUnity style={{ width: 60, height: 60, color: "#27272A" }} />
 				<SiBiome style={{ width: 60, height: 60, color: "#27272A" }} />
@@ -37,6 +36,8 @@ export const SkillsMarquee = () => {
 				<SiCplusplus style={{ width: 60, height: 60, color: "#27272A" }} />
 				<SiLlvm style={{ width: 60, height: 60, color: "#27272A" }} />
 				<SiFigma style={{ width: 60, height: 60, color: "#27272A" }} />
+				<FaAws style={{ width: 60, height: 60, color: "#27272A" }} />
+				<SiDocker style={{ width: 60, height: 60, color: "#27272A" }} />
 			</Marquee>
 		</div>
 	);
