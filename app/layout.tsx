@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Oswald } from "next/font/google";
-import { Poppins } from "next/font/google";
-import { Noto_Sans_JP } from "next/font/google";
-import { Zen_Kaku_Gothic_New } from "next/font/google";
+import {
+	Inter,
+	Noto_Sans_JP,
+	Oswald,
+	Poppins,
+	Zen_Kaku_Gothic_New,
+} from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });

@@ -1,5 +1,7 @@
 "use client";
 
+import { FaPython, FaReact, FaUnity } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
 	SiAstro,
 	SiBiome,
@@ -12,8 +14,6 @@ import {
 	SiTypescript,
 } from "react-icons/si";
 import { Marquee } from "../marquee";
-import { FaReact, FaPython, FaUnity } from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 
 export const SkillsMarquee = () => {
 	return (

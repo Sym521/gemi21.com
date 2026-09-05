@@ -1,8 +1,8 @@
 "use client";
 
-import { FlipWords } from "@/app/_components/ui/flip-words";
 import { FaCloudSun, FaGlobe, FaSpotify } from "react-icons/fa";
 import useSWR from "swr";
+import { FlipWords } from "@/app/_components/ui/flip-words";
 import fetcher from "@/lib/fetcher";
 
 export const Greeting = () => {

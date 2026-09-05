@@ -1,9 +1,9 @@
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { SkillsMarquee } from "../_components/ui/skillsMarquee";
-import { FaPython, FaReact } from "react-icons/fa6";
-import { SiTypescript, SiJavascript, SiFastapi } from "react-icons/si";
-import { Separator } from "../_components/ui/separator";
 import Link from "next/link";
+import { FaPython, FaReact } from "react-icons/fa6";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiFastapi, SiJavascript, SiTypescript } from "react-icons/si";
+import { Separator } from "../_components/ui/separator";
+import { SkillsMarquee } from "../_components/ui/skillsMarquee";
 
 export default function About() {
 	return (

@@ -1,4 +1,10 @@
-import { BentoCard, BentoGrid } from "@/app/_components/ui/bento-grid";
+import {
+	EnvelopeClosedIcon,
+	GitHubLogoIcon,
+	TwitterLogoIcon,
+} from "@radix-ui/react-icons";
+import Image from "next/image";
+import Link from "next/link";
 import {
 	FaGitAlt,
 	FaLink,
@@ -9,6 +15,8 @@ import {
 	FaUnity,
 	FaYarn,
 } from "react-icons/fa6";
+import { HiWrenchScrewdriver } from "react-icons/hi2";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
 	SiAstro,
 	SiBiome,
@@ -21,16 +29,8 @@ import {
 	SiTypescript,
 	SiUnsplash,
 } from "react-icons/si";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { HiWrenchScrewdriver } from "react-icons/hi2";
 import { VscVscode } from "react-icons/vsc";
-import Image from "next/image";
-import Link from "next/link";
-import {
-	EnvelopeClosedIcon,
-	GitHubLogoIcon,
-	TwitterLogoIcon,
-} from "@radix-ui/react-icons";
+import { BentoCard, BentoGrid } from "@/app/_components/ui/bento-grid";
 
 export const TopPageAboutMe = () => {
 	const bentoItems = [
