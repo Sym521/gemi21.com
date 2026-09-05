@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# gemi21.com
 
-## Getting Started
+Next.js App Routerで構築し、OpenNextを介してCloudflare Workersへデプロイする個人サイトです。
 
-First, run the development server:
+## 必要な環境
+
+- Node.js 22.13以上
+- pnpm 11.25.0（`package.json`の`packageManager`で固定）
+
+Corepackを利用する場合は、最初に有効化してください。
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+corepack enable
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+開発サーバーを起動します。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+pnpm dev
+```
 
-## Learn More
+[http://localhost:3000](http://localhost:3000)をブラウザーで開いてください。
 
-To learn more about Next.js, take a look at the following resources:
+主な検証コマンドは次のとおりです。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm check
+pnpm build
+pnpm opennext:build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`check`はBiomeによる検査と自動修正を行います。実行後は差分を確認してください。
 
-## Deploy on Vercel
+## Cloudflare
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ローカルでCloudflare向けのビルドを確認できます。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+pnpm opennext:build
+```
+
+デプロイは明示的に必要な場合のみ`pnpm deploy`で実行してください。

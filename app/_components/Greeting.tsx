@@ -1,8 +1,8 @@
 "use client";
 
-import { FlipWords } from "@/app/_components/ui/flip-words";
 import { FaCloudSun, FaGlobe, FaSpotify } from "react-icons/fa";
 import useSWR from "swr";
+import { FlipWords } from "@/app/_components/ui/flip-words";
 import fetcher from "@/lib/fetcher";
 
 export const Greeting = () => {
@@ -33,7 +33,7 @@ export const Greeting = () => {
 	const tempText = avgTemp ? `${avgTemp}°C` : "-°C";
 
 	return (
-		<div className="space-y-4 font-inter select-none">
+		<div className="space-y-4 select-none">
 			<div className="space-y-2">
 				<div className="flex text-6xl md:text-7xl lg:text-8xl font-bold">
 					<p className="text-blue-900">Hi there</p>
@@ -44,7 +44,7 @@ export const Greeting = () => {
 					<div>
 						Currently I&apos;m crazy about...
 						<FlipWords
-							words={["Web design", "Playing game", "AI", "Future Core", "VR"]}
+							words={["Web design", "Playing game", "AI", "Future Core", "HCI", "Ramen", "Containerization"]}
 							duration={1000}
 							className="font-extrabold text-blue-900"
 						></FlipWords>

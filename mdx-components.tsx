@@ -17,32 +17,32 @@ function getCodeBlockProps(children: any) {
 export function useMDXComponents(components: MDXComponents): MDXComponents {
     return {
         h1: ({ children, ...props }: any) => (
-            <h1 className="mt-12 mb-4 md:pb-2 text-2xl md:text-3xl font-bold text-left text-slate-800 border-b border-slate-300 font-Noto_Sans_JP" {...props}>
+            <h1 className="mt-12 mb-4 md:pb-2 text-2xl md:text-3xl font-bold text-left text-slate-800 border-b border-slate-300" {...props}>
                 {children}
             </h1>
         ),
         h2: ({ children, ...props }: any) => (
-            <h2 className="mt-8 mb-2 text-xl font-semibold text-left text-slate-800 font-Noto_Sans_JP" {...props}>
+            <h2 className="mt-8 mb-2 text-xl font-semibold text-left text-slate-800" {...props}>
                 {children}
             </h2>
         ),
         h3: ({ children, ...props }: any) => (
-            <h3 className="mt-4 mb-2 text-lg font-semibold text-left text-slate-800 font-Noto_Sans_JP" {...props}>
+            <h3 className="mt-4 mb-2 text-lg font-semibold text-left text-slate-800" {...props}>
                 {children}
             </h3>
         ),
         p: ({ children, ...props }: any) => (
-            <p className="my-2 text-base text-left text-slate-800 font-Noto_Sans_JP" {...props}>
+            <p className="my-2 text-base text-left text-slate-800" {...props}>
                 {children}
             </p>
         ),
         ul: ({ children, ...props }: any) => (
-            <ul className="my-2 list-disc list-inside text-base text-slate-800 font-Noto_Sans_JP" {...props}>
+            <ul className="my-2 list-disc list-inside text-base text-slate-800" {...props}>
                 {children}
             </ul>
         ),
         li: ({ children, ...props }: any) => (
-            <li className="mb-2 text-base text-slate-800 font-Noto_Sans_JP" {...props}>
+            <li className="mb-2 text-base text-slate-800" {...props}>
                 {children}
             </li>
         ),

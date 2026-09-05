@@ -1,11 +1,11 @@
 "use client";
 
-import { Input } from "@/app/_components/ui/input";
 import { useState } from "react";
-import { Footer } from "../_components/ui/Footer";
-import { Header } from "../_components/ui/Header";
+import { Input } from "@/app/_components/ui/input";
 import { CalcOdds, type WinningBet } from "../_components/roulette/CalcOdds";
 import { Button } from "../_components/ui/button";
+import { Footer } from "../_components/ui/Footer";
+import { Header } from "../_components/ui/Header";
 
 export default function RouletteOdds() {
 	const [inputNumber, setInputNumber] = useState<string>(""); // ユーザー入力用
@@ -32,7 +32,7 @@ export default function RouletteOdds() {
 	};
 
 	return (
-		<div className="flex flex-col w-full h-dvh md:h-dvh text-snow-100 bg-sonavy font-Noto_Sans_JP">
+		<div className="flex flex-col w-full h-dvh md:h-dvh text-snow-100 bg-sonavy">
 			<Header />
 			<h1 className="flex items-center justify-center text-xl">
 				倍率計算ツール

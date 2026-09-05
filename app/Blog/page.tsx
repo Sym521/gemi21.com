@@ -49,10 +49,7 @@ const BlogHome = () => {
 							key={post.slug}
 							className="mb-4 p-1 hover:border border-slate-300 delay-75 rounded-md transition-transform duration-100 ease-in-out transform hover:scale-[1.02]"
 						>
-							<Link
-								href={`/Blog/${post.slug}`}
-								className="block p-1 font-Noto_Sans_JP"
-							>
+							<Link href={`/Blog/${post.slug}`} className="block p-1">
 								<h2 className="text-2xl font-bold text-blue-600">
 									{post.title}
 								</h2>
