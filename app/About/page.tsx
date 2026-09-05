@@ -253,7 +253,7 @@ export default function About() {
 						</h2>
 						<span>
 							<p>株式会社アイスタイル</p>
-							<p className="text-blue-600">2026.08 - 2026.09</p>
+							<p className="text-blue-600">2026.08</p>
 						</span>
 						<div className="flex gap-2 mt-1">
 							<SiDocker style={{ width: 25, height: 25 }} />
