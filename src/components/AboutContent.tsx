@@ -23,10 +23,6 @@ export default function AboutContent() {
 				<span className="max-w-[90%] text-left">
 					<p>My name is Esuu. I am currently a CS student in Japan.</p>
 					<p>I am curious about web designing and HCI.</p>
-					<p className="flex gap-1 items-center">
-						My favorite framework is Next.js
-						<RiNextjsFill />
-					</p>
 				</span>
 			</div>
 			<hr className="my-4 border-border" />

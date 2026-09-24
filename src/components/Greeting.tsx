@@ -49,7 +49,6 @@ export default function Greeting() {
 								"Future Core",
 								"HCI",
 								"Ramen",
-								"Containerization",
 							]}
 							duration={1000}
 							className="font-extrabold text-blue-900"
