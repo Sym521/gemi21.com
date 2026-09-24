@@ -1,0 +1,52 @@
+---
+import "gen-interface-jp/300.css";
+import "gen-interface-jp/400.css";
+import "gen-interface-jp/500.css";
+import "gen-interface-jp/600.css";
+import "gen-interface-jp/700.css";
+import "gen-interface-jp/800.css";
+import "@/styles/global.css";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+
+interface Props {
+	title?: string;
+	description?: string;
+	showFooter?: boolean;
+	pageClass?: string;
+	contentClass?: string;
+}
+
+const {
+	title = "Gemi21",
+	description = "A personal website by Esu",
+	showFooter = true,
+	pageClass = "bg-zinc-50 text-zinc-900",
+	contentClass = "mb-16",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:type" content="website" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
+		<link rel="manifest" href="/manifest.json" />
+		<title>{title}</title>
+	</head>
+	<body class:list={["font-sans", pageClass]}>
+		<div class="mx-auto flex min-h-dvh max-w-5xl flex-col px-5 py-4 sm:px-8 lg:max-w-7xl">
+			<Header />
+			<main class:list={["flex-1", contentClass]}><slot /></main>
+			{showFooter && <Footer />}
+		</div>
+	</body>
+</html>

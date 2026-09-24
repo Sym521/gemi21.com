@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) =>
+	b.data.date.localeCompare(a.data.date),
+);
+---
+
+<BaseLayout title="Blog | Gemi21">
+	<section class="mt-4">
+		<h1 class="inline-block text-left text-5xl font-bold text-blue-900 md:text-7xl">Articles</h1>
+		<hr class="my-2 border-border" />
+		<ul>
+			{posts.map((post) => (
+				<li class="mb-4 rounded-md p-1 transition-transform duration-100 ease-in-out hover:scale-[1.02] hover:border hover:border-slate-300">
+					<a href={`/blog/${post.id}`} class="block p-1">
+						<h2 class="text-2xl font-bold text-blue-600">{post.data.title}</h2>
+						<p class="text-slate-600">{post.data.date} | {post.data.description}</p>
+					</a>
+				</li>
+			))}
+		</ul>
+	</section>
+</BaseLayout>
