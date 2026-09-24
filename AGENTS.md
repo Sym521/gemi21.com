@@ -57,7 +57,7 @@ date: YYYY/MM/DD
 ## 環境変数とデプロイ
 
 - `.env*`、トークン、資格情報をコミットしないでください。
-- Spotify連携では`SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET`、`SPOTIFY_REFRESH_TOKEN`を使用します。
+- Spotify連携では`SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET`、`SPOTIFY_REFRESH_TOKEN`をRuntime variables and secretsで使用します。
 - Cloudflare設定を変更するときは`astro.config.mjs`と`wrangler.jsonc`の整合性を保ってください。
 - 明示的な依頼なしにデプロイを実行しないでください。
 
