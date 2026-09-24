@@ -4,6 +4,9 @@ allowBuilds:
   unrs-resolver: true
   workerd: true
 enableGlobalVirtualStore: false
+minimumReleaseAgeExclude:
+  - miniflare@5.20260921.1-alpha
+  - wrangler@4.138.0
 overrides:
   "@types/react": 19.2.7
   "@types/react-dom": 19.2.3
