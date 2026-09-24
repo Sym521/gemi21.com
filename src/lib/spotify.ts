@@ -60,7 +60,7 @@ export async function getCurrentlyPlayingTrack(): Promise<SpotifyTrack | null> {
 
 		return (await response.json()) as SpotifyTrack;
 	} catch (error) {
-		console.error("Error fetching currently playing track:", error);
+		console.error(`Error fetching currently playing track: ${String(error)}`);
 		return null;
 	}
 }
