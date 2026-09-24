@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+import CodeBlock from "@/components/CodeBlock.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("blog");
+	return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+	post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout title={`${post.data.title} | Gemi21`} description={post.data.description}>
+	<article class="article-content mt-4 text-slate-800">
+		<header class="mb-4 space-y-2">
+			<a href="/blog" class="text-blue-600 hover:underline md:text-lg">&lt; Back to list</a>
+			<h1 class="text-left text-2xl font-semibold md:text-3xl">{post.data.title}</h1>
+			<p class="text-left">{post.data.date} - {post.data.description}</p>
+		</header>
+		<Content components={{ pre: CodeBlock, CodeBlock }} />
+	</article>
+</BaseLayout>
+
+<style is:global>
+	.article-content h1:not(header h1) { margin-top: 3rem; margin-bottom: 1rem; border-bottom: 1px solid var(--color-slate-300); padding-bottom: 0.5rem; font-size: 1.875rem; font-weight: 700; text-align: left; }
+	.article-content h2 { margin-top: 2rem; margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: 600; text-align: left; }
+	.article-content h3 { margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.125rem; font-weight: 600; text-align: left; }
+	.article-content p { margin-block: 0.5rem; text-align: left; }
+	.article-content ul { margin-block: 0.5rem; list-style-position: inside; list-style-type: disc; }
+	.article-content li { margin-bottom: 0.5rem; }
+	.article-content img { display: block; width: auto; max-width: 91.666667%; height: auto; margin: 0.5rem auto; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+	.article-content :not(pre) > code { border-radius: 0.25rem; background: var(--color-slate-100); padding: 0.125rem 0.375rem; font-family: monospace; font-size: 0.875rem; color: var(--color-slate-800); }
+	@media (min-width: 48rem) { .article-content img { max-width: 66.666667%; } }
+</style>

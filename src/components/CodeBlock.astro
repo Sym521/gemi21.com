@@ -1,0 +1,41 @@
+---
+interface Props {
+	class?: string;
+	code?: string;
+	language?: string;
+}
+
+const { class: className, code, language } = Astro.props;
+---
+
+<div class="code-block my-5 overflow-hidden rounded-md border border-border bg-background text-foreground shadow-sm">
+	<div class:list={["code-block-header min-h-10 items-center justify-between gap-3 border-b border-border bg-muted px-4 py-2", language ? "flex" : "hidden"]}>
+		<span class="code-block-language min-w-0 truncate font-mono text-xs text-muted-foreground">{language}</span>
+		<button type="button" class="rounded-md border border-border bg-background px-2.5 py-1 font-mono text-xs text-foreground transition-colors hover:bg-accent hover:text-accent-foreground">Copy</button>
+	</div>
+	<pre class:list={["overflow-x-auto p-4 text-sm leading-6", className]}>{code !== undefined ? <code>{code}</code> : <slot />}</pre>
+</div>
+
+<script>
+	for (const block of document.querySelectorAll<HTMLElement>(".code-block")) {
+		if (block.dataset.ready === "true") continue;
+		block.dataset.ready = "true";
+		const code = block.querySelector("code");
+		const header = block.querySelector<HTMLElement>(".code-block-header");
+		const label = block.querySelector<HTMLElement>(".code-block-language");
+		const button = block.querySelector<HTMLButtonElement>("button");
+		const language = [...(code?.classList ?? [])]
+			.find((name) => name.startsWith("language-"))
+			?.replace("language-", "");
+		if (language && header && label) {
+			header.classList.remove("hidden");
+			header.classList.add("flex");
+			label.textContent = language;
+		}
+		button?.addEventListener("click", async () => {
+			await navigator.clipboard.writeText(code?.textContent ?? "");
+			button.textContent = "Copied";
+			window.setTimeout(() => { button.textContent = "Copy"; }, 1600);
+		});
+	}
+</script>

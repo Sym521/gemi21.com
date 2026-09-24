@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "gemi21dotcom",
-  "main": ".open-next/worker.js",
+  "main": "@astrojs/cloudflare/entrypoints/server",
   "compatibility_date": "2026-06-11",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": ".open-next/assets",
+    "directory": "./dist",
     "binding": "ASSETS"
   },
   "observability": {

@@ -1,0 +1,17 @@
+---
+import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+---
+
+<header class="sticky top-4 z-50 flex items-center rounded-3xl border-2 border-zinc-300 bg-white/90 px-4 py-2 text-zinc-500 backdrop-blur-xs">
+	<a href="/" class="mr-auto rounded-xl bg-indigo-50 px-1.5 text-xl font-extrabold text-zinc-600 hover:text-zinc-900 md:text-4xl">G</a>
+	<nav aria-label="Main navigation" class="flex space-x-4">
+		<a href="/about" class="rounded-lg px-2 py-1 transition hover:bg-zinc-200 hover:text-zinc-900">About</a>
+		<a href="/blog" class="rounded-lg px-2 py-1 transition hover:bg-zinc-200 hover:text-zinc-900">Blog</a>
+		<a href="/works" class="rounded-lg px-2 py-1 transition hover:bg-zinc-200 hover:text-zinc-900">🚧Works</a>
+		<div class="hidden items-center space-x-8 sm:inline-flex">
+			<span aria-hidden="true" class="h-full w-px bg-border"></span>
+			<a href="https://github.com/Sym521" aria-label="GitHub"><GitHubLogoIcon width={25} height={25} className="transition hover:scale-110 hover:text-zinc-700" /></a>
+			<a href="https://x.com/esulikesbread" aria-label="X"><TwitterLogoIcon width={25} height={25} className="transition hover:scale-110 hover:text-sky-400" /></a>
+		</div>
+	</nav>
+</header>

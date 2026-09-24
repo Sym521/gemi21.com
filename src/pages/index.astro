@@ -1,0 +1,29 @@
+---
+import Greeting from "@/components/Greeting";
+import PixelBlast from "@/components/PixelBlast.jsx";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout showFooter={false} contentClass="relative flex w-full flex-1 flex-col items-center justify-center overflow-hidden">
+	<div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10 h-full w-full">
+		<PixelBlast
+			client:only="react"
+			variant="square"
+			pixelSize={4}
+			color="#f3f5fb"
+			patternScale={2.5}
+			patternDensity={1}
+			enableRipples={false}
+			rippleSpeed={0.3}
+			rippleThickness={0.1}
+			rippleIntensityScale={1}
+			speed={0.5}
+			transparent={true}
+			edgeFade={0.2}
+			className="h-full w-full"
+		/>
+	</div>
+	<div class="relative z-10 flex w-full flex-col items-start justify-center">
+		<Greeting client:load />
+	</div>
+</BaseLayout>

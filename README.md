@@ -1,45 +1,32 @@
 # gemi21.com
 
-Next.js App Routerで構築し、OpenNextを介してCloudflare Workersへデプロイする個人サイトです。
+Astro、React Islands、TypeScript、Tailwind CSSで構築し、Cloudflare Workersへデプロイする個人サイトです。Astroの開発・ビルド基盤にはViteを使用しています。
 
 ## 必要な環境
 
 - Node.js 22.13以上
 - pnpm 11.25.0（`package.json`の`packageManager`で固定）
 
-Corepackを利用する場合は、最初に有効化してください。
-
 ```bash
 corepack enable
 pnpm install
 ```
 
-## 開発
-
-開発サーバーを起動します。
+## 開発と検証
 
 ```bash
-pnpm dev
+pnpm dev       # Astro + Viteの開発サーバー
+pnpm check     # Astroの型検査とBiome検査
+pnpm build     # Cloudflare向け本番ビルド
+pnpm preview   # 本番ビルドのローカル確認
 ```
 
-[http://localhost:3000](http://localhost:3000)をブラウザーで開いてください。
+開発サーバーは通常 [http://localhost:4321](http://localhost:4321) で起動します。
 
-主な検証コマンドは次のとおりです。
+## コンテンツ
 
-```bash
-pnpm check
-pnpm build
-pnpm opennext:build
-```
-
-`check`はBiomeによる検査と自動修正を行います。実行後は差分を確認してください。
+ブログ記事は`src/content/blog/<slug>.mdx`に置き、YAML frontmatterで`title`、`description`、`date`を指定します。静的アセットは`public/`に置きます。
 
 ## Cloudflare
 
-ローカルでCloudflare向けのビルドを確認できます。
-
-```bash
-pnpm opennext:build
-```
-
-デプロイは明示的に必要な場合のみ`pnpm deploy`で実行してください。
+Spotify連携には`SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET`、`SPOTIFY_REFRESH_TOKEN`が必要です。デプロイは、明示的に必要な場合のみ`pnpm deploy`で実行してください。

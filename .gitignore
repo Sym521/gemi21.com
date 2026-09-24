@@ -9,11 +9,15 @@
 # testing
 /coverage
 
-# next.js
+# generated output
 /.next/
 /out/
 /.open-next/
 /.wrangler/
+/dist/
+/.astro/
+/.playwright-cli/
+/output/playwright/
 
 # production
 /build
