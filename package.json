@@ -10,7 +10,8 @@
     "cf-typegen": "wrangler types",
     "lint": "biome lint ./src",
     "format": "biome format --write ./src",
-    "check": "astro check && biome check ./src"
+    "check": "astro check && biome check ./src",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.3",
@@ -40,7 +41,7 @@
     "@types/react-dom": "19.2.3",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.9.3",
-    "wrangler": "^4.137.0"
+    "wrangler": "^4.138.0"
   },
   "packageManager": "pnpm@11.25.0"
 }
