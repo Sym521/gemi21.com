@@ -38,7 +38,8 @@ export default function Greeting() {
 					<p>👋</p>
 				</div>
 				<div className="text-base sm:text-xl md:text-2xl space-y-2">
-					<p>I&apos;m Esuu, a Japanese student majoring in computer science.</p>
+                    <p>My name is Hiroki Seyama.</p>
+					<p>I&apos;m a Japanese student majoring in computer science.</p>
 					<div>
 						Currently I&apos;m crazy about...
 						<FlipWords

@@ -21,7 +21,7 @@ export default function AboutContent() {
 					About
 				</h1>
 				<span className="max-w-[90%] text-left">
-					<p>My name is Esuu. I am currently a CS student in Japan.</p>
+					<p>My name is Hiroki Seyama. I am currently a CS student in Japan.</p>
 					<p>I am curious about web designing and HCI.</p>
 				</span>
 			</div>
